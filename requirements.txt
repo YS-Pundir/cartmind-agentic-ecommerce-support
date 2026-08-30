@@ -1,0 +1,47 @@
+# ============================================================
+# CartMind — Agentic E-Commerce Customer Support System
+# Python: 3.13.11
+# ============================================================
+
+# -------------------------
+# Agent Orchestration
+# -------------------------
+langgraph
+langgraph-checkpoint-sqlite
+
+# -------------------------
+# LLM / LangChain
+# -------------------------
+langchain
+langchain-core
+langchain-community
+
+# -------------------------
+# RAG / Embeddings
+# -------------------------
+sentence-transformers
+chromadb
+
+# -------------------------
+# Data Validation
+# -------------------------
+pydantic
+jsonschema
+
+# -------------------------
+# API Deployment
+# -------------------------
+fastapi
+uvicorn[standard]
+
+# -------------------------
+# MCP
+# -------------------------
+fastmcp
+
+
+# -------------------------
+# Evaluation / Data
+# -------------------------
+numpy
+pandas
