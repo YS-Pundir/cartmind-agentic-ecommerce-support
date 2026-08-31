@@ -1,0 +1,40 @@
+[
+    {
+        "query": "What is the return window for electronics?",
+        "expected_sources": [
+            "02_return_window_by_product_category.pdf"
+        ]
+    },
+    {
+        "query": "How long does a COD refund take after a return is approved?",
+        "expected_sources": [
+            "04_cod_refund_timelines.pdf"
+        ]
+    },
+    {
+        "query": "What happens if my payment fails while placing an order?",
+        "expected_sources": [
+            "10_payment_failure_and_retry_policy.pdf"
+        ]
+    },
+    {
+        "query": "What is the policy for redeeming loyalty points?",
+        "expected_sources": [
+            "09_loyalty_points_redemption_policy.pdf"
+        ]
+    },
+    {
+        "query": "What should I do if I receive a damaged item?",
+        "expected_sources": [
+            "12_damaged_item_claim_process.pdf"
+        ]
+    },
+    {
+        "query": "How do I bake a chocolate cake?",
+        "expected_sources": []
+    },
+    {
+        "query": "What will the weather be like tomorrow?",
+        "expected_sources": []
+    }
+]
