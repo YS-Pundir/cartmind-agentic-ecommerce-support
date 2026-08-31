@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from src.config import ( api_key,
                         rag_prompt,
@@ -12,10 +11,6 @@ from src.rag.retrieval import( retrieve_chunks
 
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain_classic.vectorstores import Chroma
-from langchain_core.tools import tool
-
-
-
 
 from groq import Groq
 client=Groq(api_key=api_key)
@@ -29,7 +24,6 @@ from tenacity import (
     before_sleep_log, 
 
 )
-
 
 
 logging.basicConfig(
@@ -51,8 +45,6 @@ Here are some documents and their source that may be relevant to the question me
 ###Question
 {question}
 """
-
-
 
 
 @retry(
@@ -90,5 +82,3 @@ def rag_generate(user_input: str) -> str:
         prediction = f'Sorry, I encountered the following error: \n {e}'
 
     return prediction
-user="what is the capital of india?"
-print("prediction : ",rag_generate(user))
