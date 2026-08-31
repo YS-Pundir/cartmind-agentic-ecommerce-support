@@ -2,7 +2,7 @@ from src.config import kd_loc
 
 from pathlib import Path
 from typing import TypedDict
-from langchain_community.document_loaders import TextLoader
+from langchain_community.document_loaders import PyPDFDirectoryLoader
 
 
 class Document(TypedDict):
@@ -25,7 +25,7 @@ def load_markdown_documents(directory: str | Path) -> list[Document]:
         )
 
 
-    text = TextLoader(kd_loc)
+    text = PyPDFDirectoryLoader(kd_loc)
 
     documents=text.load()
 
@@ -35,6 +35,8 @@ def load_markdown_documents(directory: str | Path) -> list[Document]:
         raise ValueError(
             f"No Markdown documents found in {directory}"
         )
+
+    print("document loaded !!")
 
     return documents
 
