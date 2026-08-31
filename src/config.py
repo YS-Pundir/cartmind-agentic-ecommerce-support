@@ -10,5 +10,5 @@ chroma_loc=str(project_root/"storage"/"vector_databases")
 
 
 # knowledge documents location
-kd_loc=project_root/"data"/"policy_docs"/"ecommerce_customer_support_knowledge_base.md"
+kd_loc=project_root/"data"/"policy_docs"/"nimbus_kb_split_by_topic"
 
