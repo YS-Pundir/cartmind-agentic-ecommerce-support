@@ -1,0 +1,129 @@
+{
+    "calibrated_threshold": 0.1,
+    "results": [
+        {
+            "strategy": "Fixed-Size",
+            "collection_name": "kb_fixed_size",
+            "queries": [
+                {
+                    "query": "What is the return window for electronics?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.2797,
+                    "mock_llm_response": "Based on the information provided: 2. Return Window by Product Category\nNimbus Commerce uses category-specific return windows because different products have different resale, hygiene,\nsafety, and inspection requirements. The return wi... (Simulated answer for: What is the return window for electronics?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "How long does a COD refund take after a return is approved?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.478,
+                    "mock_llm_response": "Based on the information provided: 4. COD Refund Timelines\nCash on Delivery (COD) orders require a separate refund workflow because the original payment was collected\nin cash or through a delivery-agent collection process rather than t... (Simulated answer for: How long does a COD refund take after a return is ...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What happens if my payment fails while placing an order?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.4053,
+                    "mock_llm_response": "Based on the information provided: 10. Payment-Failure and Retry Policy\nPayment failures can occur because of insufficient funds, bank restrictions, expired cards, authentication failures,\nprovider outages, incorrect billing informatio... (Simulated answer for: What happens if my payment fails while placing an ...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What is the policy for redeeming loyalty points?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.6385,
+                    "mock_llm_response": "Based on the information provided: 9. Loyalty-Points Redemption Policy\nNimbus Rewards points can be earned on qualifying purchases and redeemed for eligible discounts or benefits.\n9.1 Redemption Rules\n\u2022 Minimum redemption: 500 points.\n... (Simulated answer for: What is the policy for redeeming loyalty points?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What should I do if I receive a damaged item?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.3693,
+                    "mock_llm_response": "Based on the information provided: 12. Damaged-Item Claim Process\nCustomers who receive visibly damaged or defective products should contact Nimbus Commerce promptly.\n12.1 Claim Window\nA transit-damage claim should normally be reported... (Simulated answer for: What should I do if I receive a damaged item?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "How do I bake a chocolate cake?",
+                    "precision_at_3": 0.0,
+                    "recall_at_3": 0.0,
+                    "max_similarity": -0.3622,
+                    "mock_llm_response": "I don't know, the information provided is not sufficient or relevant enough to answer your question.",
+                    "Status": "Fallback"
+                },
+                {
+                    "query": "What will the weather be like tomorrow?",
+                    "precision_at_3": 0.0,
+                    "recall_at_3": 0.0,
+                    "max_similarity": -0.1801,
+                    "mock_llm_response": "I don't know, the information provided is not sufficient or relevant enough to answer your question.",
+                    "Status": "Fallback"
+                }
+            ]
+        },
+        {
+            "strategy": "Sentence-Based",
+            "collection_name": "kb_sentence_based",
+            "queries": [
+                {
+                    "query": "What is the return window for electronics?",
+                    "precision_at_3": 0.0,
+                    "recall_at_3": 0.0,
+                    "max_similarity": 0.2964,
+                    "mock_llm_response": "Based on the information provided: 12.4 Severe Damage\nFor broken glass, exposed electrical components, leaking batteries, overheating devices, or other potentially\nhazardous conditions, the standard return workflow should not be used u... (Simulated answer for: What is the return window for electronics?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "How long does a COD refund take after a return is approved?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.6389,
+                    "mock_llm_response": "Based on the information provided: How long does a COD refund take?\n\nNimbus Commerce normally initiates an approved COD refund within 3 business days after return inspection.\n\nBank posting may require an additional 2\u20135 business days.\n\n... (Simulated answer for: How long does a COD refund take after a return is ...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What happens if my payment fails while placing an order?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.5348,
+                    "mock_llm_response": "Based on the information provided: A failed payment does not necessarily mean that an order was created successfully.\n\n10.2 Temporary Authorization\nCustomers may see a temporary bank authorization even when an order fails.\n\nSuch an aut... (Simulated answer for: What happens if my payment fails while placing an ...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What is the policy for redeeming loyalty points?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.5351,
+                    "mock_llm_response": "Based on the information provided: 9.\n\nLoyalty-Points Redemption Policy\nNimbus Rewards points can be earned on qualifying purchases and redeemed for eligible discounts or benefits.\n\n9.1 Redemption Rules\n\u2022 Minimum redemption: 500 points... (Simulated answer for: What is the policy for redeeming loyalty points?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "What should I do if I receive a damaged item?",
+                    "precision_at_3": 0.3333,
+                    "recall_at_3": 1.0,
+                    "max_similarity": 0.3063,
+                    "mock_llm_response": "Based on the information provided: What if I received a damaged product?\n\nReport transit damage promptly, normally within 48 hours, and provide requested evidence.\n\nThe claims team\nmay approve replacement, refund, repair, or another re... (Simulated answer for: What should I do if I receive a damaged item?...)",
+                    "Status": "Grounded"
+                },
+                {
+                    "query": "How do I bake a chocolate cake?",
+                    "precision_at_3": 0.0,
+                    "recall_at_3": 0.0,
+                    "max_similarity": -0.356,
+                    "mock_llm_response": "I don't know, the information provided is not sufficient or relevant enough to answer your question.",
+                    "Status": "Fallback"
+                },
+                {
+                    "query": "What will the weather be like tomorrow?",
+                    "precision_at_3": 0.0,
+                    "recall_at_3": 0.0,
+                    "max_similarity": -0.156,
+                    "mock_llm_response": "I don't know, the information provided is not sufficient or relevant enough to answer your question.",
+                    "Status": "Fallback"
+                }
+            ]
+        }
+    ]
+}
