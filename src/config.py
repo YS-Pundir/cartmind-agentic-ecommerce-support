@@ -38,3 +38,5 @@ rag_prompt_path=rag_data["rag_tool"]["v1"]["prompt_path"]
 rag_prompt=get_prompt(rag_prompt_path)
 rag_temperature=rag_data["rag_tool"]["v1"]["config"]["temperature"]
 rag_log_location=project_root/"logs"/"api_retries"/"rag_llm_retries.log"
+task45_eval_loc=project_root/"eval"/"golden"/"part1_task45.json"
+task45_result_loc=project_root/"eval"/"results"/"part1_task45.json"
