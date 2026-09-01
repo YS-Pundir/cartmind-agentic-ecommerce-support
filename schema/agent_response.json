@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": ["action_taken","status","response_message","needs_human"
+],
+  "properties": {
+    "action_taken": {
+      "type": "string",
+      "enum": [
+        "order_status_check",
+        "policy_lookup",
+        "feedback_collection",
+        "human_escalation",
+        "prompt_injection_detection",
+        "error_handling"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "not_found",
+        "escalated",
+        "blocked",
+        "error",
+        "validation_failed"
+      ]
+    },
+
+    "response_message": {
+      "type": "string"
+    },
+
+    "needs_human": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
