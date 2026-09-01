@@ -25,14 +25,9 @@ from tenacity import (
 
 )
 
+logger = logging.getLogger("rag_generation")
 
-logging.basicConfig(
-    level=logging.INFO,
-    filename=rag_log_location,
-    filemode="a",
-)
 
-logger = logging.getLogger(__name__)
 attempt_counter={"n":0}
 
 
@@ -71,6 +66,7 @@ def rag_generate(user_input: str) -> str:
     ]
 
     try:
+        logger.info("RAG API CALL")
         response = client.chat.completions.create(
         model=rag_model,
         messages=prompt,
@@ -78,7 +74,9 @@ def rag_generate(user_input: str) -> str:
         )
 
         prediction = response.choices[0].message.content
+        logger.info("RAG API SUCCESS")
     except Exception as e:
-        prediction = f'Sorry, I encountered the following error: \n {e}'
+        logger.error(f"RAG API FAILED: {e}")
+        raise
 
     return prediction
