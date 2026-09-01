@@ -1,0 +1,4 @@
+timestamp,record_id,query,intent
+2026-09-01 17:12:24.649881,abc1233,delay in order,order shipment
+2026-09-01 18:23:05.299453,,"I need to speak to a human about my  ORD0020, it's urgent!.",defer_request
+2026-09-01 18:24:41.261650,ORD001,"I need to speak to a human about my  ORD0020, it's urgent!.",defer_request
