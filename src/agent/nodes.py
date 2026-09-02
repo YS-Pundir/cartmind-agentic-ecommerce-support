@@ -3,11 +3,13 @@ from src.agent.state import AgentState
 from src.tools.sql_tool import check_order_status
 from src.tools.feedback_tool import register_feedback
 from src.tools.deffered_tool import defer_to_human
-from src.tools.rag_tool import rag
+from src.tools.rag_tool import rag,rag_with_score
 
+from src.memory.conversation_sql import _to_messages
+from src.memory.conversation_rag import _needs_history_context,_recent_context
 from src.guardrails.injection import detect_prompt_injection
 from src.guardrails.pii import mask_pii
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage,AIMessage
 
 from src.config import (api_key,
                         resp_gen_max_token,
@@ -41,6 +43,9 @@ attempt_counter = {"n": 0}
 
 
 
+
+
+
 def classify_intent(state: AgentState) -> dict:
     """Classifies the user's intent and records the input in chat_history.
     Applies PII masking to the user input and detects prompt injection before further processing.
@@ -60,22 +65,29 @@ def classify_intent(state: AgentState) -> dict:
     # 2. Apply PII masking
     user_input = mask_pii(original_user_input)
 
-    chat_history = state.get("chat_history", []) # Get existing history or start new
-    chat_history.append(HumanMessage(content=user_input)) # Add user's masked message
+
+    # normalize + copy instead of mutating in place
+    chat_history = _to_messages(state.get("chat_history", []))
+    chat_history = chat_history + [HumanMessage(content=user_input)]
 
     user_query_lower = user_input.lower()
-    if "order" in user_query_lower or "record_id" in user_query_lower or "status" in user_query_lower:
-        print("\n--- Classified Intent: order_status ---")
-        return {"intent": "order_status", "chat_history": chat_history,"input":user_input}
-    elif "feedback" in user_query_lower or "rating" in user_query_lower or "experience" in user_query_lower:
+    if "feedback" in user_query_lower or "rating" in user_query_lower or "experience" in user_query_lower:
         print("\n--- Classified Intent: feedback_request ---")
         return {"intent": "feedback_request", "chat_history": chat_history,"input":user_input}
     elif "human" in user_query_lower or "agent" in user_query_lower or "escalate" in user_query_lower or "help me further" in user_query_lower:
         print("\n--- Classified Intent: defer_request ---")
         return {"intent": "defer_request", "chat_history": chat_history,"input":user_input}
+    elif "order" in user_query_lower or "record_id" in user_query_lower or "status" in user_query_lower:
+        print("\n--- Classified Intent: order_status ---")
+        return {"intent": "order_status", "chat_history": chat_history,"input":user_input}
+
     else:
         print("\n--- Classified Intent: policy_query ---")
         return {"intent": "policy_query", "chat_history": chat_history,"input":user_input}
+
+
+
+
 
 
 
@@ -86,6 +98,14 @@ def call_sql_tool(state: AgentState) -> dict:
     match = re.search(r"ORD\d{4}", user_query.upper())
     record_id = match.group(0) if match else None
 
+    if not record_id:
+        for msg in reversed(state.get("chat_history", [])):
+            content = getattr(msg, "content", "")
+            m = re.search(r"ORD\d{4}", content.upper())
+            if m:
+                record_id = m.group(0)
+                break
+
     if record_id:
         print(f"\n--- Calling check_order_status for {record_id} ---")
         output = check_order_status(record_id)
@@ -93,35 +113,65 @@ def call_sql_tool(state: AgentState) -> dict:
     else:
         return {"tool_output": "Could not extract a valid order ID from your query. Please provide it in the format ORD-XXXX."}
 
+
+
+
 def call_rag_tool(state: AgentState) -> dict:
-    """Calls the RAG tool to answer policy-related questions."""
+    """Calls the RAG tool. Falls back to history-augmented retrieval only
+    when the current query looks anaphoric AND that augmentation actually
+    improves retrieval confidence over the raw query."""
     user_query = state["input"]
-    print(f"\n--- Calling RAG tool for '{user_query}' ---")
-    output = rag(user_query)
-    return {"tool_output": output}
+    chat_history = state.get("chat_history", [])
+
+    if not _needs_history_context(user_query):
+        print(f"\n--- Calling RAG tool for '{user_query}' (no history needed) ---")
+        return {"tool_output": rag(user_query)}
+
+
+    
+
+    context = _recent_context(chat_history)
+    enriched_query = f"{context} {user_query}".strip() if context else user_query
+    print(f"---calling rag tool with enriched query----{enriched_query}")
+
+    # Retrieve with both versions, keep whichever the retriever is
+    # more confident about (reuses your Task-4 similarity signal).
+
+    enriched_result = rag(enriched_query) 
+    return {"tool_output": enriched_result}
+  
+
+
+
 
 def call_feedback_tool(state: AgentState) -> dict:
     """Calls the feedback tool to collect user feedback."""
     
     user_query = state["input"]
-    record_id=state["record_id"]
     intent=state["intent"]
 
     print(f"\n--- Calling Feedback Tool for: '{user_query}' ---")
     # Assuming the entire input is the feedback for simplicity in this demo
     feedback = user_query.replace("give feedback", "").replace("my feedback is", "").strip()
-    output = register_feedback(intent,record_id,feedback)
+    output = register_feedback(intent,feedback)
     return {"tool_output": output}
+
+
+
+
 
 def call_defer_human_tool(state: AgentState) -> dict:
     """Calls the defer human tool to escalate the query."""
     user_query = state["input"]
-    record_id=state["record_id"]
     intent=state["intent"]
 
     print(f"\n--- Calling Defer Human Tool for: '{user_query}' ---")
-    output = defer_to_human(record_id,user_query,intent)
+    output = defer_to_human(user_query,intent)
     return {"tool_output": output}
+
+
+
+
 
 @retry(
     stop=stop_after_attempt(4),
@@ -135,8 +185,13 @@ def generate_response(state: AgentState) -> dict:
 
     intent=state["intent"]
     tool_output=state["tool_output"]
+    history_snippet = "\n".join(
+        f"{'User' if isinstance(m, HumanMessage) else 'Agent'}: {m.content}"
+        for m in state.get("chat_history", [])[-6:]  # last 3 exchanges
+    )
 
     user_message = f"""
+    Recent conversation:{history_snippet}
     Intent:{intent}
     
     Tool Output:{tool_output}
