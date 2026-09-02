@@ -7,10 +7,11 @@ from src.config import feedback_log_location
 feedback_log = pd.read_csv(feedback_log_location)
 
 
-def register_feedback(intent: str, record_id: int, feedback: str) -> str:
+def register_feedback(intent: str, feedback: str) -> str:
 
     global feedback_log
     record_id = input("Please enter your customer id : ",)
+
 
     feedback_entry = {
         "timestamp": datetime.now(),
@@ -21,6 +22,6 @@ def register_feedback(intent: str, record_id: int, feedback: str) -> str:
 
     feedback_log = pd.concat([feedback_log, pd.DataFrame([feedback_entry])], ignore_index=True)
 
-    feedback_log.to_csv(feedback_log_location)
+    feedback_log.to_csv(feedback_log_location,index=False)
     return "Feedback registered successfully!"
 
