@@ -2,12 +2,11 @@ from datetime import datetime
 from src.config import ( api_key,
                         rag_prompt,
                         rag_temperature,
-                        rag_model,
-                        rag_log_location
+                        rag_model
                         )
 
 from src.rag.retrieval import( retrieve_chunks
-                              ,retreiver)
+                              ,retreiver, retrieve_chunks_with_score)
 
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain_classic.vectorstores import Chroma
@@ -80,3 +79,26 @@ def rag_generate(user_input: str) -> str:
         raise
 
     return prediction
+
+
+def rag_generate_with_score(user_input: str, return_score: bool = False):
+    relevant_document_chunks, top1_score = retrieve_chunks_with_score(user_input)
+    context_list = [d.page_content + "\n ###Source: " + d.metadata['source'] + "\n\n " for d in relevant_document_chunks]
+    context_for_query = ". ".join(context_list)
+
+    prompt = [
+        {'role': 'system', 'content': rag_prompt},
+        {'role': 'user', 'content': qna_user_message_template.format(
+            context=context_for_query, question=user_input)}
+    ]
+
+    try:
+        logger.info("RAG API CALL")
+        response = client.chat.completions.create(model=rag_model, messages=prompt, temperature=rag_temperature)
+        prediction = response.choices[0].message.content
+        logger.info("RAG API SUCCESS")
+    except Exception as e:
+        logger.error(f"RAG API FAILED: {e}")
+        raise
+
+    return (prediction, top1_score) if return_score else prediction
