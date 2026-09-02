@@ -14,12 +14,12 @@ def check_order_status(record_id: str) -> dict:
     
     cursor = conn.cursor()
 
-    cursor.execute("SELECT status, order_value_inr, days_since_created, delayed_shipment FROM orders WHERE record_id = ?", (record_id,))
+    cursor.execute("SELECT category,status, order_value_inr, days_since_created, delayed_shipment FROM orders WHERE record_id = ?", (record_id,))
     result = cursor.fetchone()
     conn.close()
 
     if result:
-        status, order_value_inr, days_since_created, delayed_shipment = result
+        category,status, order_value_inr, days_since_created, delayed_shipment = result
 
         # Calculate escalation score
         # Formula: escalation_score = (days_since_created / 30) * 0.7 + (1 if delayed_shipment else 0) * 0.3
@@ -30,6 +30,7 @@ def check_order_status(record_id: str) -> dict:
 
         return {
             "record_id": record_id,
+            "category":category,
             "status": status,
             "order_value_inr": order_value_inr,
             "days_since_created": days_since_created,
