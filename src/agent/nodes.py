@@ -132,7 +132,7 @@ def call_rag_tool(state: AgentState) -> dict:
 
     context = _recent_context(chat_history)
     enriched_query = f"{context} {user_query}".strip() if context else user_query
-    print(f"---calling rag tool with enriched query----{enriched_query}")
+    print(f"---calling rag tool with enriched query----")
 
     # Retrieve with both versions, keep whichever the retriever is
     # more confident about (reuses your Task-4 similarity signal).

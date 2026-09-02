@@ -514,5 +514,49 @@
         "content": "Feedback registered successfully!"
       }
     ]
+  },
+  "dhfbei34": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is my order status ORD0005"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0005', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 2869, 'days_since_created': 17, 'delayed_shipment': True, 'escalation_score': 0.6967}"
+      },
+      {
+        "role": "user",
+        "content": "what is the refund window for that?"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order status**  \n- **ORD0005** is currently **Refunded** (as shown in the order record you provided).\n\n**Refund / return window for Electronics**  \n- For the **Electronics** category, Nimbus Commerce allows a **14‑day standard return window**.  \n- The window starts from the **confirmed delivery date** (not the order‑placement date).  \n- Within this period the product must be returned with all required accessories, manuals, and the serial number intact to be eligible for a refund or exchange.\n\nSo, for an electronics order like yours, the refund/return eligibility is normally limited to **14 calendar days after delivery**. If the delivery occurred more than 14 days ago, the standard return window has expired, and any further assistance would be handled under the product’s warranty (up to 24 months for defects)."
+      },
+      {
+        "role": "user",
+        "content": "and what would you say on my escalation score of the order status"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0005', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 2869, 'days_since_created': 17, 'delayed_shipment': True, 'escalation_score': 0.6967}"
+      },
+      {
+        "role": "user",
+        "content": "i want to defer my case to human"
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      },
+      {
+        "role": "user",
+        "content": "my feedback was great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      }
+    ]
   }
 }
