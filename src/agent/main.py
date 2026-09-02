@@ -1,7 +1,8 @@
-from src.agent.agent import MEMORY_FILE,print_history,run_agent
+from src.agent.agent import MEMORY_FILE,run_agent
 from src.memory.conversation import ConversationMemory
+import uuid
 
-
+thread_id = str(uuid.uuid4())
 
 
 def main() -> None:
@@ -17,7 +18,7 @@ def main() -> None:
     # Create memory manager
     # ---------------------------------------------------------
 
-    memory = ConversationMemory(MEMORY_FILE)
+    con_memory = ConversationMemory(MEMORY_FILE)
 
     # ---------------------------------------------------------
     # Ask for conversation ID
@@ -36,10 +37,10 @@ def main() -> None:
     # Load previous memory
     # ---------------------------------------------------------
 
-    history = memory.get_history(conversation_id)
+    history = con_memory.get_history(conversation_id)
 
     if history:
-        print_history(history)
+        #print_history(history)
 
         print(
             f"\n[Memory] Loaded {len(history)} "
@@ -83,9 +84,9 @@ def main() -> None:
 
         if query.lower() == "history":
 
-            history = memory.get_history(conversation_id)
+            history = con_memory.get_history(conversation_id)
 
-            print_history(history)
+            #print_history(history)
 
             continue
 
@@ -95,7 +96,7 @@ def main() -> None:
 
         if query.lower() == "clear":
 
-            memory.clear(conversation_id)
+            con_memory.clear(conversation_id)
 
             print(
                 "\n[Memory] Conversation history "
@@ -121,7 +122,8 @@ def main() -> None:
         answer = run_agent(
                 query=query,
                 conversation_id=conversation_id,
-                memory=memory,
+                con_memory=con_memory,
+                thread_id=thread_id
             )
 
         print(f"\nAgent: {answer}")

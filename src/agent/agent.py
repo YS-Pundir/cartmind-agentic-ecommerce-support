@@ -1,32 +1,22 @@
 from __future__ import annotations
-from src.agent.graph import app
+from src.agent.graph import build_workflow
 import src.logging_config
 from src.config import conversations_file_loc
 from src.memory.conversation import ConversationMemory
+from src.agent.graph import memory
+from src.resilience.timeouts import invoke_with_global_timeout
+from concurrent.futures import TimeoutError as FutureTimeoutError
 
 MEMORY_FILE = conversations_file_loc
 
 
-def print_history(history: list[dict[str, str]]) -> None:
-    """Display persisted conversation history."""
-
-    if not history:
-        print("\n[Memory] No previous conversation found.")
-        return
-
-    print("\n[Memory] Previous conversation:")
-
-    for message in history:
-        role = message["role"].upper()
-        content = message["content"]
-
-        print(f"{role}: {content}")
 
 
 def run_agent(
     query: str,
     conversation_id: str,
-    memory: ConversationMemory,
+    con_memory: ConversationMemory,
+    thread_id:str
 ):
     """
     Run one turn of the LangGraph agent using persisted memory.
@@ -36,7 +26,7 @@ def run_agent(
     # 1. Load persisted conversation history
     # ---------------------------------------------------------
 
-    history = memory.get_history(conversation_id)
+    history = con_memory.get_history(conversation_id)
 
     # ---------------------------------------------------------
     # 2. Build LangGraph state
@@ -47,11 +37,17 @@ def run_agent(
         "chat_history": history,
     }
 
+    config = { "configurable": { "thread_id": thread_id, } }
+
     # ---------------------------------------------------------
     # 3. Run LangGraph
     # ---------------------------------------------------------
+    try:
+        app = build_workflow(memory)
+        result=invoke_with_global_timeout(app,state,config,40)
+    except FutureTimeoutError:
+        result={"tool_output":"Sorry workflow took to much time , please try again later"}
 
-    result = app.invoke(state)
 
     # ---------------------------------------------------------
     # 4. Extract response
@@ -70,7 +66,7 @@ def run_agent(
     # 5. Persist the new exchange
     # ---------------------------------------------------------
 
-    memory.add_exchange(
+    con_memory.add_exchange(
         conversation_id=conversation_id,
         user_message=query,
         assistant_message=answer,

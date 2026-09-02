@@ -1,5 +1,5 @@
 from src.agent.state import AgentState
-
+import time
 from src.tools.sql_tool import check_order_status
 from src.tools.feedback_tool import register_feedback
 from src.tools.deffered_tool import defer_to_human
@@ -10,7 +10,9 @@ from src.memory.conversation_rag import _needs_history_context,_recent_context
 from src.guardrails.injection import detect_prompt_injection
 from src.guardrails.pii import mask_pii
 from langchain_core.messages import HumanMessage,AIMessage
-
+from langgraph.types import RetryPolicy
+from src.resilience.timeouts import run_with_timeout
+from concurrent.futures import ThreadPoolExecutor,TimeoutError as FutureTimeoutError
 from src.config import (api_key,
                         resp_gen_max_token,
                         resp_gen_prompt,
@@ -40,6 +42,7 @@ from tenacity import (
 logger = logging.getLogger("response_generation")
 
 attempt_counter = {"n": 0}
+
 
 
 
@@ -92,6 +95,7 @@ def classify_intent(state: AgentState) -> dict:
 
 
 def call_sql_tool(state: AgentState) -> dict:
+
     """Calls the check_order_status tool with the extracted record_id."""
     user_query = state["input"]
     # Simple regex to extract record_id, assuming format like 'ORD-XXXX'
@@ -120,15 +124,17 @@ def call_rag_tool(state: AgentState) -> dict:
     """Calls the RAG tool. Falls back to history-augmented retrieval only
     when the current query looks anaphoric AND that augmentation actually
     improves retrieval confidence over the raw query."""
+  
     user_query = state["input"]
     chat_history = state.get("chat_history", [])
 
     if not _needs_history_context(user_query):
         print(f"\n--- Calling RAG tool for '{user_query}' (no history needed) ---")
-        return {"tool_output": rag(user_query)}
-
-
-    
+        try : 
+            response= run_with_timeout(lambda:rag(user_query),10)
+            return {"tool_output": response}
+        except FutureTimeoutError:
+            return {"tool_output": "rag genration taking too long "}
 
     context = _recent_context(chat_history)
     enriched_query = f"{context} {user_query}".strip() if context else user_query
@@ -136,9 +142,12 @@ def call_rag_tool(state: AgentState) -> dict:
 
     # Retrieve with both versions, keep whichever the retriever is
     # more confident about (reuses your Task-4 similarity signal).
+    try : 
+        enriched_result= run_with_timeout(lambda:rag(enriched_query),10)
+        return {"tool_output": enriched_result}
+    except FutureTimeoutError:
+            return {"tool_output": "rag genration with enriched query taking too long "}
 
-    enriched_result = rag(enriched_query) 
-    return {"tool_output": enriched_result}
   
 
 
