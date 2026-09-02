@@ -54,3 +54,6 @@ resp_gen_max_token=response_data["response_generater"]["v1"]["config"]["max_tock
 feedback_log_location=project_root/"storage"/"feedbacks"/"feedback_storage.csv"#
 deferred_case_location=project_root/"storage"/"deferred_cases"/"cases.csv"
 
+conversations_file_loc=project_root/"storage"/"conversation"/"conversations.json"
+
+
