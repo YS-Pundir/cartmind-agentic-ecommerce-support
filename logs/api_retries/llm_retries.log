@@ -353,3 +353,154 @@ INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "H
 2026-09-02 17:50:13,293 - response_generation - INFO - RESPONSE API CALL
 2026-09-02 17:50:14,210 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-09-02 17:50:14,212 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 18:50:54,687 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 18:50:55,872 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 18:50:55,889 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:16:45,712 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:16:46,632 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:16:46,685 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:17:20,061 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:17:21,225 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:17:21,248 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:17:21,473 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:17:22,172 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:17:22,173 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:49:27,420 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:49:28,650 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:49:28,675 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:49:47,681 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:49:49,335 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:49:49,336 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:53:07,269 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:53:09,019 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:53:09,031 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:53:09,187 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:53:10,357 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:53:10,359 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:53:41,970 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:53:42,811 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:53:42,813 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:53:59,613 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:54:00,730 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:54:00,731 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:54:00,931 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:54:01,960 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:54:01,962 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:56:08,183 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:56:09,041 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:56:09,062 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:56:09,223 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 19:56:10,269 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:56:10,271 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 19:59:16,461 - rag_generation - INFO - RAG API CALL
+2026-09-02 19:59:18,381 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 19:59:18,400 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 19:59:18,558 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:19,722 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:21,886 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:26,241 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.20 seconds (attempt 1) after RetryError RetryError[<Future at 0x2990fe4d6e0 state=finished raised KeyError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 195, in generate_response
+    tool_output=state["tool_output"]
+                ~~~~~^^^^^^^^^^^^^^^
+KeyError: 'tool_output'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x2990fe4d6e0 state=finished raised KeyError>]
+During task with name 'generate_response' and id '5030cebf-f18c-1e38-1c42-9db973118027'
+2026-09-02 19:59:26,445 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:27,600 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:29,754 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:34,322 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.40 seconds (attempt 2) after RetryError RetryError[<Future at 0x2990ff0ce50 state=finished raised KeyError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 195, in generate_response
+    tool_output=state["tool_output"]
+                ~~~~~^^^^^^^^^^^^^^^
+KeyError: 'tool_output'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x2990ff0ce50 state=finished raised KeyError>]
+During task with name 'generate_response' and id '5030cebf-f18c-1e38-1c42-9db973118027'
+2026-09-02 19:59:34,488 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:35,644 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 19:59:37,799 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised KeyError: 'tool_output'.
+2026-09-02 20:03:49,964 - rag_generation - INFO - RAG API CALL
+2026-09-02 20:03:52,511 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:03:52,572 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 20:03:52,719 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:03:54,045 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:03:54,047 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:09:52,934 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:09:53,986 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:09:54,007 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:11:38,016 - rag_generation - INFO - RAG API CALL
+2026-09-02 20:11:40,075 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:11:40,096 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 20:11:40,297 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:11:41,201 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:11:41,204 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:12:26,733 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:12:27,792 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:12:27,793 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:14:55,649 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:14:56,684 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:14:56,698 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:16:24,759 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:16:25,781 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:16:25,784 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:17:20,320 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:17:21,276 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:17:21,297 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:19:59,374 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:20:00,205 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:20:00,226 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:20:24,902 - rag_generation - INFO - RAG API CALL
+2026-09-02 20:20:26,316 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:20:26,317 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 20:20:26,482 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:20:27,441 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:20:27,443 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:20:56,416 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:20:57,138 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:20:57,140 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 20:21:20,630 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 20:21:21,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 20:21:21,453 - response_generation - INFO - RESPONSE API SUCCESS

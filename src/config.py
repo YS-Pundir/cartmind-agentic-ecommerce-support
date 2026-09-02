@@ -56,4 +56,5 @@ deferred_case_location=project_root/"storage"/"deferred_cases"/"cases.csv"
 
 conversations_file_loc=project_root/"storage"/"conversation"/"conversations.json"
 
+checkpoint_conn_loc=project_root/"storage"/"checkpoints"/"checkpoints.sqlite"
 

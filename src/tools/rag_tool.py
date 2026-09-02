@@ -3,7 +3,6 @@ from src.rag.generation import rag_generate,rag_generate_with_score
 from langchain_core.tools import tool
 
 
-
 def rag(user_input: str) -> str:
 
     try:

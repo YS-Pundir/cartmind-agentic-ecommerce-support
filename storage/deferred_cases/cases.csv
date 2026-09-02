@@ -10,3 +10,4 @@ timestamp,record_id,query,intent,contact number
 2026-09-02 17:09:36.336884,uhfbjusdfgsdhg,i need human help,defer_request,1234567890.0
 2026-09-02 17:11:37.606476,usdhbuifg,i need human help,defer_request,1234567890.0
 2026-09-02 17:49:54.481996,7485789,i want to defer my case to human,defer_request,1234567890.0
+2026-09-02 20:21:20.470187,uhbugeris,i want human help,defer_request,1234567890.0

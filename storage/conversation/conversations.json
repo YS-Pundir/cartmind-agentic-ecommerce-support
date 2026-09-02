@@ -558,5 +558,181 @@
         "content": "Feedback registered successfully!"
       }
     ]
+  },
+  "degfsdg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "find the status of the order ORD0005"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0005', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 2869, 'days_since_created': 17, 'delayed_shipment': True, 'escalation_score': 0.6967}"
+      },
+      {
+        "role": "user",
+        "content": "what is the refund window for it ?"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order Status**  \n- **Order ID:** ORD0005  \n- **Current status:** **Refunded**  \n\n**Refund (return) window for this order**  \n- The product belongs to the **Electronics** category.  \n- According to the policy, **Electronics have a standard 14‑day return/refund window** (counted from the confirmed delivery date, not from the order‑placement date).  \n\nSo, the applicable refund window for this order is **14 days from delivery**. Since the order is already marked “Refunded,” the refund has been processed within that window (or via the COD refund workflow if applicable)."
+      }
+    ]
+  },
+  "fsgdfg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "please check my order status for ORD0009"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0009', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 2063, 'days_since_created': 30, 'delayed_shipment': False, 'escalation_score': 0.7}"
+      }
+    ]
+  },
+  "hgdfg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is refund policy for electronics"
+      },
+      {
+        "role": "assistant",
+        "content": "**Electronics – Refund / Return Policy**\n\n| Item | Return window | Condition for return | What happens after a return |\n|------|---------------|----------------------|-----------------------------|\n| **Electronics** (e.g., laptops, phones, cameras) | **14 calendar days** from delivery | Must be in eligible condition – unused, undamaged, with all original accessories and packaging. Returns that are materially used, intentionally damaged, incomplete, counterfeit, or missing essential components may be rejected. | 1. **Return request** → 2. **Eligibility check** → 3. **Return authorization** → 4. **Physical receipt & inspection** → 5. **Refund initiation** (within 3 business days after inspection) → 6. **Bank posting** (typically an additional 2‑5 business days). |\n\n**If the product is defective after the 14‑day window**\n\n* The standard return window has expired, but the item is still covered by its **standard warranty** (12–24 months depending on the category).  \n* The case should be routed through the warranty diagnostics process rather than the return‑refund flow.\n\n**Key points to communicate to the customer**\n\n1. **Eligibility** – The purchase must be within 14 days and the item must be in its original, undamaged condition.  \n2. **Next steps** – Submit a return request; once approved you’ll receive a return authorization and shipping instructions.  \n3. **Refund timing** – After the returned item is inspected and approved, the refund is initiated within 3 business days. The funds will appear in the customer’s bank account within an additional 2‑5 business days, depending on the payment provider.  \n\nIf the customer’s electronics are outside the 14‑day window but are defective, advise them to start a **warranty claim** instead of a standard return."
+      },
+      {
+        "role": "user",
+        "content": "what is order status for ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      },
+      {
+        "role": "user",
+        "content": "is there any refund window for that"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order status**  \n- The order **ORD0007** is currently **Delivered**.\n\n**Refund / return window**  \n- Nimbus Commerce allows a return (and subsequent refund) only if it is requested within the **applicable return window for the product’s category** and the item meets the standard return conditions (e.g., unused, not damaged, complete).  \n- The specific number of days allowed for the “Home” category is **not provided in the excerpts you shared**, so I can’t give the exact refund window for this order.\n\nIf you need the precise return period for Home‑category items, please let me know or refer to the detailed return policy for that category. I'm happy to help further!"
+      }
+    ]
+  },
+  "rrfgdfgdfg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need help with token policy of the company"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't have enough information in my knowledge base to answer that question."
+      }
+    ]
+  },
+  "esabgr": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need help with the refund policy of the company"
+      },
+      {
+        "role": "assistant",
+        "content": "rag genration taking too long "
+      }
+    ]
+  },
+  "rgedrger": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need help for my order ORD0006"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0006', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 15746, 'days_since_created': 7, 'delayed_shipment': False, 'escalation_score': 0.1633}"
+      }
+    ]
+  },
+  "dfghesr": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need halp with the policy on refund"
+      },
+      {
+        "role": "assistant",
+        "content": "**Refund Policy Overview (Nimbus Commerce)**  \n\n1. **Current Status**  \n   – You haven’t provided a specific order, so I’ll share the general refund rules that apply to all orders.\n\n2. **Applicable Policy**  \n   - **Return windows** (must be met before a refund can be processed):  \n     - Clothing & Footwear: **30 days**  \n     - Electronics: **14 days**  \n     - Small appliances: **21 days**  \n     - Large appliances & Furniture: **14 days**  \n     - Unopened beauty products: **30 days**  \n     - Opened hygiene products: **generally non‑returnable**  \n   - **Return conditions** (the item must be in its original, unworn state, with tags attached and all essential components included). Returns can be rejected if the product is materially used, damaged by the customer, incomplete, counterfeit, or substituted.  \n   - **Refund sequence** (a refund is **not** automatic):  \n     1. Return request →  \n     2. Eligibility validation →  \n     3. Return authorization →  \n     4. Physical receipt of the item →  \n     5. Inspection →  \n     6. Approval →  \n     7. Refund initiation →  \n     8. Payment‑provider processing →  \n     9. Confirmation in your account.  \n\n3. **Eligibility**  \n   - Your purchase must fall within the category‑specific return window and meet the condition requirements listed above.  \n   - For **Cash‑on‑Delivery (COD)** orders, the same return windows apply, but the refund workflow is separate because payment was collected in cash.\n\n4. **Next Action**  \n   - If you believe your order meets the above criteria, start a **return request** through your Nykaa account (Orders → Select order → “Request return”).  \n   - Provide any required details (e.g., reason for return, photos if the item is damaged).  \n\n5. **Expected Timeframe**  \n   - **Standard refunds (non‑COD):** Once the returned item passes inspection, the refund is processed immediately by our system. The time it takes to appear in your bank or card statement depends on your payment provider (usually 2–5 business days).  \n   - **COD refunds:**  \n     - Refund is **initiated within 3 business days** after inspection.  \n     - Your bank may need an additional **2–5 business days** to post the amount.  \n     - If the refund shows as “processed” but you haven’t received the money after this period, we will verify the transaction reference before escalating to the Payments team.  \n\n6. **Information You May Need to Provide**  \n   - Order number.  \n   - Bank details (for COD refunds) if not already on file.  \n   - Reason for return and, if applicable, photos of any damage.  \n\nIf you have a specific order in mind, please share the order number and the reason for the refund so I can check its eligibility and guide you through the exact next steps."
+      }
+    ]
+  },
+  "fsdfg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need my order details for order id ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "I was unable to generate a response."
+      },
+      {
+        "role": "user",
+        "content": "i need order details for order id ORD0001"
+      },
+      {
+        "role": "assistant",
+        "content": "I was unable to generate a response."
+      }
+    ]
+  },
+  "dfger": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need order details of ORD0004"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry workflow took to much time , please try again later"
+      }
+    ]
+  },
+  "ewrtfgserg": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need help on order status ORD0012"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0012', 'category': 'Footwear', 'status': 'Returned', 'order_value_inr': 5092, 'days_since_created': 3, 'delayed_shipment': False, 'escalation_score': 0.07}"
+      },
+      {
+        "role": "user",
+        "content": "what would be refund window of it ?"
+      },
+      {
+        "role": "assistant",
+        "content": "**Refund (return) window for your order**\n\n- **Product category:** Footwear  \n- **Standard return window for footwear:** **30 calendar days** from the confirmed delivery date, provided the shoes are unworn, in their original box (or packaging) and in the condition required for a standard change‑of‑mind return.  \n\nBecause your order **ORD0012** is already marked **“Returned,”** the return was made within that 30‑day window (the order is only 3 days old).  \n\n**What happens next**\n\n1. **Return inspection** – Once the returned shoes are received and inspected, the return will be approved (or any issues will be flagged).  \n2. **Refund initiation** – After approval, Nimbus Commerce initiates the refund to the original payment method.  \n3. **Payment‑provider processing** – The actual credit to your account may take a few business days (typically 2‑5 business days for most online payment methods; COD refunds can take up to 2 business days).  \n\nSo, the **refund window** you need to be aware of is the **30‑day return period** for footwear. After the return is approved, you can expect the refund to appear in your account within a few business days, depending on your payment method.  \n\nIf you do not see the refund after this period, please let us know and we’ll verify the refund initiation timestamp and transaction reference for you."
+      },
+      {
+        "role": "user",
+        "content": "my feedback was great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      },
+      {
+        "role": "user",
+        "content": "i want human help"
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      }
+    ]
   }
 }
