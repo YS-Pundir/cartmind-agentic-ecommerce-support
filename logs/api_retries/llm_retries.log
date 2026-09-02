@@ -62,3 +62,276 @@ INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "H
 2026-09-01 20:34:52,288 - response_generation - INFO - RESPONSE API CALL
 2026-09-01 20:34:53,605 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-09-01 20:34:53,607 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-01 20:56:14,155 - rag_generation - INFO - RAG API CALL
+2026-09-01 20:56:15,775 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-01 20:56:15,799 - rag_generation - INFO - RAG API SUCCESS
+2026-09-01 20:56:16,137 - response_generation - INFO - RESPONSE API CALL
+2026-09-01 20:56:17,809 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-01 20:56:17,811 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 13:01:50,472 - rag_generation - INFO - RAG API CALL
+2026-09-02 13:01:51,525 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 13:01:51,545 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 13:01:51,685 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 13:01:52,431 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 13:01:52,432 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:10:56,282 - rag_generation - INFO - RAG API CALL
+2026-09-02 14:10:57,220 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:10:57,238 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 14:10:57,432 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:10:58,260 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:10:58,261 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:12:17,759 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:12:18,380 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:12:18,382 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:12:41,102 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:12:42,282 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:12:42,283 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:13:22,643 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:13:23,481 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:13:23,482 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:15:11,483 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:15:12,427 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:15:12,428 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:15:23,509 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:15:24,535 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:15:24,536 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:22:58,425 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:22:59,260 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:22:59,270 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:23:14,447 - rag_generation - INFO - RAG API CALL
+2026-09-02 14:23:15,851 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:23:15,853 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 14:23:16,027 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:23:16,873 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:23:16,874 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:28:31,511 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:28:32,577 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:28:32,594 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:40:42,251 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:40:43,105 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:40:43,130 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:45:45,741 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:45:46,674 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:45:46,707 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 14:50:39,064 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 14:50:40,201 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 14:50:40,210 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:01:40,222 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:01:41,877 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:01:41,895 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:01:42,047 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:01:43,127 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:01:43,129 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:02:37,634 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:02:39,266 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:02:39,268 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:02:59,870 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:03:00,498 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:03:00,500 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:03:21,409 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:03:24,747 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:03:24,749 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:04:00,685 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:04:02,325 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:04:02,325 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:04:02,521 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:04:03,864 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 15:04:03,868 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-02 15:04:03,870 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}.
+2026-09-02 15:04:05,029 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:04:06,292 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 15:04:06,293 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}
+2026-09-02 15:04:06,294 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}.
+2026-09-02 15:04:08,450 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:04:09,470 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:04:09,470 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:36:37,288 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:36:38,211 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:36:38,231 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:36:52,543 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:36:54,965 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:36:54,967 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:36:55,117 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:36:55,949 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:36:55,951 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:37:30,614 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:37:31,356 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:37:31,358 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:38:21,971 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:38:23,325 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:38:23,327 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:38:35,795 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:38:36,673 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:38:36,675 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:38:36,830 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:38:37,893 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:38:37,895 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:48:24,387 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:48:25,426 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:48:25,441 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:48:39,869 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:48:40,698 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:48:40,700 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:48:40,842 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:48:41,777 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:48:41,778 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 15:49:09,515 - rag_generation - INFO - RAG API CALL
+2026-09-02 15:49:10,906 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:49:10,908 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 15:49:11,047 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 15:49:12,014 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 15:49:12,016 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:02:43,182 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:02:44,333 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:02:44,352 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:24:30,215 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:24:31,281 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:24:31,292 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:24:40,807 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 1 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:41,809 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 2 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:43,810 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 4 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:47,810 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 1 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:48,812 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 2 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:50,813 - rag_generation - WARNING - Retrying src.rag.generation.rag_generate in 4 seconds as it raised TypeError: rag_generate() got an unexpected keyword argument 'return_score'.
+2026-09-02 16:24:54,963 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:24:55,731 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:24:55,733 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:29:14,298 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:29:15,969 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:15,984 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:29:16,128 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:29:17,443 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:17,445 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:29:45,227 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:29:46,836 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:46,837 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:29:55,580 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:29:57,111 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:57,113 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:29:57,133 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:29:58,023 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:58,024 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:29:58,177 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:29:58,880 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:29:58,881 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:36:17,395 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:36:18,232 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:36:18,243 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:36:28,050 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:36:29,638 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:36:29,638 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:36:29,777 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:36:30,681 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:36:30,683 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:36:56,380 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:36:57,300 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:36:57,301 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:37:06,984 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:37:07,750 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:37:07,751 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:37:07,975 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:37:10,066 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:37:10,068 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:37:10,216 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:37:11,680 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 16:37:11,680 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-02 16:37:11,681 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}.
+2026-09-02 16:37:12,823 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:37:15,961 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 16:37:15,961 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-02 16:37:15,962 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}.
+2026-09-02 16:37:18,105 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:37:18,186 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-02 16:37:18,187 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2026-09-02 16:37:29,660 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 16:37:29,660 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-02 16:37:29,661 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}.
+2026-09-02 16:37:33,805 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:37:33,869 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-02 16:37:33,870 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-09-02 16:37:41,945 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-02 16:37:41,946 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-09-02 16:37:45,018 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 16:37:45,025 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-02 16:40:33,002 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:40:36,230 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:40:36,259 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:40:42,746 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:40:45,537 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:40:45,538 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:40:45,830 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:40:46,577 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:40:46,578 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:40:46,734 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:40:48,039 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-02 16:40:48,039 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}
+2026-09-02 16:40:48,040 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}.
+2026-09-02 16:40:49,181 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:40:50,175 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:40:50,175 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:45:05,019 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:45:06,011 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:45:06,026 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:46:11,011 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:46:13,623 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:46:13,636 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:46:25,396 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:46:26,425 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:46:26,426 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:48:32,527 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:48:33,607 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:48:33,618 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:48:48,230 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:48:49,476 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:48:49,477 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:48:49,629 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:48:50,601 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:48:50,602 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:56:04,446 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:56:05,306 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:56:05,316 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:56:13,884 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:56:15,160 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:56:15,162 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:56:15,316 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:56:16,486 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:56:16,488 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:57:46,276 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:57:47,679 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:57:47,691 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:59:11,484 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:59:12,412 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:59:12,427 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 16:59:21,396 - rag_generation - INFO - RAG API CALL
+2026-09-02 16:59:21,899 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:59:21,901 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 16:59:22,040 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 16:59:24,264 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 16:59:24,266 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:02:49,353 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:02:50,950 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:02:50,963 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:04:21,021 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:04:23,201 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:04:23,216 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:04:33,290 - rag_generation - INFO - RAG API CALL
+2026-09-02 17:04:34,600 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:04:34,601 - rag_generation - INFO - RAG API SUCCESS
+2026-09-02 17:04:34,771 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:04:35,497 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:04:35,498 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:05:46,252 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:05:48,431 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:05:48,432 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:07:02,810 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:07:04,860 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:07:04,862 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:09:36,483 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:09:37,373 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:09:37,383 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:11:37,759 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:11:38,451 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:11:38,461 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-02 17:12:06,332 - response_generation - INFO - RESPONSE API CALL
+2026-09-02 17:12:07,018 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-02 17:12:07,020 - response_generation - INFO - RESPONSE API SUCCESS
