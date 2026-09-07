@@ -6,10 +6,9 @@ from src.guardrails.pii import mask_pii
 deferred_cases = pd.read_csv(deferred_case_location)
 
 
-def defer_to_human( query: str, intent: str) -> str:
+def defer_to_human( query: str, intent: str,record_id:str) -> str:
 
     global deferred_cases
-    record_id = input("Please enter your customer id : ",)
     while True:
         try:
             phone_input = input("Please enter your phone no (10 digits): ")
