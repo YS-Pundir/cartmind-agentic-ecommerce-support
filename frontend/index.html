@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cartmind — Support Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <button class="drawer-toggle" id="drawerToggle" aria-label="Toggle threads panel" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="backdrop" id="backdrop"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="brand-mark">Cartmind</span>
+      <span class="brand-sub">support desk</span>
+    </div>
+
+    <button class="new-thread-btn" id="newThreadBtn" type="button">+ New thread</button>
+
+    <div class="panel-label">Threads</div>
+    <div class="thread-list" id="threadList"></div>
+    <p class="thread-empty" id="threadEmpty">No threads yet. Send a message to start one.</p>
+
+    <div class="kb-panel">
+      <div class="panel-label">Knowledge base</div>
+      <label class="dropzone" id="dropzone" for="fileInput">
+        <span id="dropzoneText">Drop a PDF here or <span class="link-text">browse</span></span>
+        <input type="file" id="fileInput" accept="application/pdf" hidden />
+      </label>
+      <p class="kb-hint">PDFs are embedded into the vector DB the agent searches for policy questions.</p>
+      <div class="kb-status" id="kbStatus" aria-live="polite"></div>
+    </div>
+  </aside>
+
+  <main class="chat">
+    <header class="chat-header">
+      <div>
+        <div class="chat-header-title" id="chatTitle">New thread</div>
+        <div class="chat-header-sub" id="chatSubtitle">Not saved yet — send a message to open a ticket</div>
+      </div>
+      <div class="status-wrap">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">checking backend…</span>
+      </div>
+    </header>
+
+    <div class="messages" id="messages" aria-live="polite">
+      <div class="empty-state" id="emptyState">
+        <p>Ask about an order, a return, or a policy. Cartmind pulls the answer from your order records or the knowledge base.</p>
+      </div>
+    </div>
+
+    <form class="composer" id="composerForm">
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Type your message…"
+        autocomplete="off"
+        aria-label="Message"
+      />
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
