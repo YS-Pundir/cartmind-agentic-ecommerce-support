@@ -15,3 +15,6 @@ timestamp,record_id,query,intent,contact number
 2026-09-06 17:36:59.218884,ORD0007,"ORD0007 , i need human help",defer_request,1234567890.0
 2026-09-06 17:37:36.190793,ORD0007,i need human support immediatly,defer_request,987654321.0
 2026-09-06 17:38:57.527428,ORD0007,i need human help,defer_request,5432167890.0
+2026-09-07 15:03:31.609395,ORD0006,i need human help for ORD0006,defer_request,
+2026-09-07 16:07:48.895810,ORD0008,i need human help for order id ORD0008,defer_request,
+2026-09-07 16:27:52.184638,ORD0007,i need human help,defer_request,

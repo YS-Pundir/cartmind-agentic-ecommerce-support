@@ -94,5 +94,326 @@
         "content": "Case deferred to human agent and logged successfully!"
       }
     ]
+  },
+  "1234": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "order details for ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      },
+      {
+        "role": "user",
+        "content": "order details for ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": {
+          "action_taken": "order_status_check",
+          "status": "success",
+          "response_message": "Your order ORD0007 (Home) was delivered. It was placed 27 days ago and valued at ₹6,930. Please note the shipment experienced a delay.",
+          "needs_human": false
+        }
+      }
+    ]
+  },
+  "46757848": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "order status ORD0006"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0006', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 15746, 'days_since_created': 7, 'delayed_shipment': False, 'escalation_score': 0.1633}"
+      },
+      {
+        "role": "user",
+        "content": "what is refund window for that"
+      },
+      {
+        "role": "assistant",
+        "content": "**Refund (return) window for Electronics**\n\n- **Duration:** 14 calendar days from the **confirmed delivery date** (not the order‑placement date).  \n- **Condition required:** The product must be returned with all required accessories, manuals and the serial number intact.\n\nSo, for order ORD0006 (category Electronics), the standard refund/return window is **14 days** after delivery, provided the above condition is met."
+      }
+    ]
+  },
+  "string": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "refund policy for the electronics"
+      },
+      {
+        "role": "assistant",
+        "content": "**Electronics Refund / Return Policy**\n\n| Aspect | Details |\n|--------|---------|\n| **Return window** | **14 calendar days** from the date of delivery (see Appendix A – “Electronics returns 14 days”). |\n| **Eligibility conditions** | • Item must be in its original, unused condition (no material use, damage, or missing components).<br>• Must be returned with all original accessories, packaging, and any required documentation.<br>• Returns that fail inspection because of customer‑caused damage may result in a partial refund, store credit, or replacement, not a full refund (see “Return Conditions and Refund Eligibility”). |\n| **Defective items after the return window** | If the product is defective and the 14‑day return period has passed, the **standard warranty** applies (12–24 months depending on the electronics category). The claim is routed through the warranty diagnostics process (see Scenario B). |\n| **Refund process** | 1. Submit a return request.<br>2. Eligibility is validated against the 14‑day window and condition rules.<br>3. Return is authorized and the item is shipped back.<br>4. Upon receipt, the item is inspected.<br>5. If approved, the refund is **initiated** (typically within 3 business days after inspection).<br>6. The payment provider processes the refund, which may take an additional **2–5 business days** to appear in the customer’s account (see FAQ “How long does a COD refund take?”). |\n| **What if the return is outside the window?** | The return will be **rejected** under the standard return policy. The customer should instead pursue a warranty claim if the product is defective. |\n\n**Key Takeaway:**  \nElectronics can be returned for a full refund only if the request is made within **14 days** and the item is in its original, unused condition. After that period, only the manufacturer’s warranty (12–24 months) applies for defects."
+      }
+    ]
+  },
+  "szfvbzu": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is order status for ORD0009"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0009', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 2063, 'days_since_created': 30, 'delayed_shipment': False, 'escalation_score': 0.7}"
+      }
+    ]
+  },
+  "46757849": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is order status of ORD0015"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0015', 'category': 'Beauty', 'status': 'Placed', 'order_value_inr': 287, 'days_since_created': 21, 'delayed_shipment': False, 'escalation_score': 0.49}"
+      }
+    ]
+  },
+  "46757850": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is order status of ORD0034"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0034', 'category': 'Apparel', 'status': 'Delivered', 'order_value_inr': 4600, 'days_since_created': 24, 'delayed_shipment': True, 'escalation_score': 0.86}"
+      },
+      {
+        "role": "user",
+        "content": "what is refund window for that"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order status**  \n- **ORD0034** is currently **“Delivered.”**\n\n**Refund (return) window**  \n- The order is for **Apparel** (clothing).  \n- Nimbus Commerce’s policy gives **30 calendar days** from the **confirmed delivery date** to return clothing items, provided they are unworn, unwashed, and retain original tags.  \n\nSo, you have up to **30 days after delivery** to request a refund or size exchange for this order."
+      }
+    ]
+  },
+  "46757851": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need human help for ORD0006"
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      },
+      {
+        "role": "user",
+        "content": "my feedback was great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      },
+      {
+        "role": "user",
+        "content": "what would be delivery status for my order"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0006', 'category': 'Electronics', 'status': 'Refunded', 'order_value_inr': 15746, 'days_since_created': 7, 'delayed_shipment': False, 'escalation_score': 0.1633}"
+      },
+      {
+        "role": "user",
+        "content": "i need change offer for this product"
+      },
+      {
+        "role": "assistant",
+        "content": "**Delivery‑status answer**\n\nBased on the delivery‑status definitions in the policy:\n\n| Definition | Meaning |\n|------------|---------|\n| **Order confirmed** | Payment and order validation succeeded |\n| **Processing** | Order is being prepared (not yet handed to carrier) |\n| **Shipped / In‑transit** | Parcel has entered the carrier network |\n| **Out for delivery** | Carrier has assigned the parcel to a delivery route |\n| **Delivered** | Carrier reports a successful delivery event |\n| **Delivery exception** | An issue is preventing normal progress |\n\nYour order record shows the **order status is “Refunded.”**  \nA “Refunded” status indicates that the order has already been cancelled/returned and the refund has been processed.  \n\n- If the refund was issued **before the parcel was handed to the carrier**, the order never entered any of the delivery stages – there is no active delivery status.  \n- If the refund was issued **after the parcel was delivered and then returned**, the last delivery‑related status the parcel would have had is **“Delivered.”**  \n\nTherefore, for a **Refunded** order the current delivery status is effectively **N/A (not applicable)**, or, if a delivery had already occurred, the final delivery status would have been **Delivered** before the return/refund process began.\n\n---\n\n**Regarding “change offer for this product”**\n\nThe provided policy documents do not contain information about modifying offers or promotions for a specific product. If you need to change an offer, please contact the Nykaa promotions or sales team directly, as that request falls outside the scope of the delivery and order‑cancellation policies.  \n\nIf you have any other questions about your order’s status or the refund process, feel free to let me know!"
+      },
+      {
+        "role": "user",
+        "content": "thanks , thats all i wanted to ask"
+      },
+      {
+        "role": "assistant",
+        "content": "You’re welcome! If you have any other questions in the future, feel free to reach out. Have a great day!"
+      }
+    ]
+  },
+  "46757852": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need order details for ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      }
+    ]
+  },
+  "46757853": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need order status for ORD0002"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0002', 'category': 'Apparel', 'status': 'Shipped', 'order_value_inr': 1643, 'days_since_created': 23, 'delayed_shipment': True, 'escalation_score': 0.8367}"
+      },
+      {
+        "role": "user",
+        "content": "what is refund window for that"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order status:** Shipped (as you indicated).\n\n**Refund / return window for this Apparel order:**  \n- For clothing‑type items (the “Apparel” category), Nimbus Commerce allows a **30‑day return window**.  \n- The 30‑day period starts **from the confirmed delivery date** (not from the order‑placement date).  \n\nSo, once the order is delivered, you have up to **30 calendar days** to request a refund or exchange, provided the item meets the standard return conditions (e.g., unworn, tags attached, original packaging)."
+      }
+    ]
+  },
+  "46757854": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need human help for order id ORD0008"
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      },
+      {
+        "role": "user",
+        "content": "what is order status for that"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "give me policy on the delivery status of this thing"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "give me policy on the delivery shipment of this thing"
+      },
+      {
+        "role": "assistant",
+        "content": "**Policy that applies to the order you described (status = “Shipped”, 13 days since creation)**  \n\n| Item | Relevant policy excerpt | What it means for this order |\n|------|------------------------|------------------------------|\n| **Delivery‑status definition** | “Shipped/in‑transit means the parcel has entered the carrier network.” (Delivery SLAs – 5.2) | The order is currently in the carrier’s network, not yet out for delivery or delivered. |\n| **Delivery SLA (Domestic)** | • Standard parcel : 2‑7 business days total  <br>• Large‑item parcel : 4‑10 business days total  (Delivery SLAs – 5.1) | Assuming a Home‑category item is a **large‑item**, the expected total window is **4‑10 business days**. At **13 days** the order is **outside the SLA** and is therefore a **late delivery**. |\n| **Late‑delivery handling** | “A customer should normally be treated as experiencing a late delivery when the current date exceeds the applicable promised delivery range without an approved exception. … If there has been no carrier scan for 48 hours while the parcel is in transit, the support agent may open a carrier investigation.” (Delivery SLAs – 5.3) | Because the order is past its SLA, support should: <br>1. **Check the tracking feed** for the last carrier scan. <br>2. If the parcel has **no scan for ≥ 48 hours**, **initiate a carrier investigation**. |\n| **Missing/Delayed/Lost Package Policy** | “For domestic shipments, support may initiate a carrier investigation after 48 hours without movement when the parcel is already outside its expected delivery range… A delayed parcel should not automatically be declared lost. The lost‑package workflow requires the applicable investigation threshold to be reached.” (Missing, Delayed, or Lost Package Policy – 15) | The order is **delayed**, not yet **lost**. Follow the 48‑hour‑no‑scan rule to start an investigation; do **not** ask the customer to reorder immediately. |\n| **Customer communication** | “The customer may be asked to check common delivery locations and household or building recipients before a claim is opened.” (Missing, Delayed, or Lost Package Policy – 15) | After opening the investigation, ask the customer to verify that the parcel isn’t with a neighbour, concierge, or other usual drop‑off point. |\n| **Resolution after investigation** | “Depending on inventory and customer preference, Nimbus Commerce may provide a replacement or refund after the appropriate investigation stage.” (Missing, Delayed, or Lost Package Policy – 15) | Once the carrier confirms the parcel is lost or cannot be delivered, support can offer a **replacement** or **refund** per the investigation outcome. |\n\n### What the support agent should do now\n1. **Review the tracking details** for ORD0008.  \n2. If the last carrier scan is **older than 48 hours**, **open a carrier investigation** (per the 48‑hour rule).  \n3. **Ask the customer** to double‑check any possible delivery locations (e.g., neighbour, reception).  \n4. **Monitor the investigation**; if the carrier confirms loss, process a **replacement or refund** according to inventory and the customer’s preference.  \n5. **Do not request an immediate reorder** unless there is a clear business reason.\n\nThese steps follow the **Delivery SLA**, **Late‑Delivery**, and **Missing/Delayed/Lost Package** policies outlined in the Nimbus Commerce knowledge base."
+      },
+      {
+        "role": "user",
+        "content": "feedback is great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      },
+      {
+        "role": "user",
+        "content": "What happens to the original order numbers, payment records, and invoices when two eligible Nimbus Commerce orders are consolidated for shipment?"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "What happens to the original  numbers, payment records, and invoices when two eligible Nimbus Commerce orders are consolidated for shipment?"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "What happens to the original order numbers, payment records, and invoices when two eligible Nimbus Commerce  are consolidated for shipment?"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "What happens to the original numbers, payments , and invoices when two eligible Nimbus Commerce are consolidated for shipment?"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't have enough information in my knowledge base to answer that question."
+      },
+      {
+        "role": "user",
+        "content": "What happens to the original numbers, payments , and invoices when two eligible Nimbus Commerce are consolidated for shipment?"
+      },
+      {
+        "role": "assistant",
+        "content": "When two eligible orders are **consolidated for shipment**, the physical items are packed together, but **nothing changes about the original orders themselves**:\n\n- **Each order keeps its own order number.**  \n- **All payment authorizations, totals, taxes, coupons, and other financial details stay exactly as they were.**  \n- **Invoices are not merged** – they continue to reference the original, separate orders.  \n\nIn short, the consolidation only affects how the items are shipped; the original order numbers, payments and invoices remain unchanged."
+      },
+      {
+        "role": "user",
+        "content": "feedback was great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      }
+    ]
+  },
+  "46757855": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need order status for ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      },
+      {
+        "role": "user",
+        "content": "refund window for that"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order Status**  \n- **Order ID:** ORD0007  \n- **Current status:** **Delivered**  \n\n**Refund / Return Window**  \nI’m sorry, but I don’t have enough information in my knowledge base to tell you the exact refund or return window for this order.  \n\nIf you need the specific return period, please let me know and I can guide you on how to check the policy details or connect you with the appropriate team."
+      },
+      {
+        "role": "user",
+        "content": "i need human help"
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      },
+      {
+        "role": "user",
+        "content": "also give me refund window for the electronics"
+      },
+      {
+        "role": "assistant",
+        "content": "**Refund window for electronics**\n\n- **Standard return period:** 14 calendar days from the date of delivery.  \n- If the 14‑day window has passed, electronics are no longer eligible for a standard return, but they remain covered by the manufacturer’s warranty (typically up to 24 months) for defects.\n\n**Your request**\n\nYour case has been deferred to a human‑agent queue and logged successfully. A team member will review it and get back to you shortly.\n\n**Next steps & timeframe**\n\n- A human agent will contact you within **1 business day** to confirm the next actions (e.g., return instructions, warranty routing, or further assistance).  \n- If you are within the 14‑day return window, you can initiate a return for a refund or exchange; otherwise, we’ll guide you through the warranty process.\n\nThank you for reaching out—help is on the way!"
+      },
+      {
+        "role": "user",
+        "content": "any coupon policy?"
+      },
+      {
+        "role": "assistant",
+        "content": "**Coupon (Promotional Discount) Policy – Summary**\n\n- **General Rules**\n  - Coupons are governed by the specific terms of each campaign.\n  - Common restrictions include:\n    - Minimum basket value  \n    - Eligible product categories  \n    - One coupon per order  \n    - Customer‑account restrictions (e.g., new‑customer only)  \n    - Campaign expiration date  \n    - Geographic restrictions  \n    - Seller restrictions (some sellers may be excluded)  \n    - Exclusion of items already discounted  \n\n- **Cash Conversion**\n  - Coupons **cannot** be converted to cash under normal circumstances.\n\n- **If a Coupon Fails at Checkout**\n  1. Verify that the order meets all campaign requirements (basket value, eligible items, etc.).  \n  2. Support can investigate manually **only** if the customer provides enough information to reproduce the issue (order number, coupon code, screenshots, etc.).\n\n- **Returns Involving a Discounted Order**\n  - When a product from a multi‑item order that used a coupon is returned, the refund engine **re‑calculates the discount**.  \n  - The customer should **not expect** to receive the full undiscounted price of the returned item; the discount is proportionally adjusted.\n\n- **Price Adjustments**\n  - Nimbus Commerce may issue a price‑adjustment **within 7 days** if a qualifying price difference is caused by a Nimbus price change.  \n  - Differences arising from promotional coupons are **excluded** unless the specific promotion states otherwise.\n\n---\n\nIf you need help applying a coupon, checking eligibility, or troubleshooting a failed coupon, please provide your order number and the coupon code you tried to use."
+      },
+      {
+        "role": "user",
+        "content": "feedback is great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      }
+    ]
   }
 }
