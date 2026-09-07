@@ -70,7 +70,7 @@ def classify_intent(state: AgentState) -> dict:
 
 
     # normalize + copy instead of mutating in place
-    chat_history = _to_messages(state.get("chat_history", []))
+    chat_history = state.get("chat_history",[])
     chat_history = chat_history + [HumanMessage(content=user_input)]
 
     user_query_lower = user_input.lower()
@@ -98,7 +98,7 @@ def call_sql_tool(state: AgentState) -> dict:
 
     """Calls the check_order_status tool with the extracted record_id."""
     user_query = state["input"]
-    # Simple regex to extract record_id, assuming format like 'ORD-XXXX'
+    # Simple regex to extract record_id, assuming format like 'ORDXXXX'
     match = re.search(r"ORD\d{4}", user_query.upper())
     record_id = match.group(0) if match else None
 
@@ -115,7 +115,7 @@ def call_sql_tool(state: AgentState) -> dict:
         output = check_order_status(record_id)
         return {"tool_output": str(output)}
     else:
-        return {"tool_output": "Could not extract a valid order ID from your query. Please provide it in the format ORD-XXXX."}
+        return {"tool_output": "Could not extract a valid order ID from your query. Please provide it in the format ORDXXXX."}
 
 
 
@@ -155,14 +155,26 @@ def call_rag_tool(state: AgentState) -> dict:
 
 def call_feedback_tool(state: AgentState) -> dict:
     """Calls the feedback tool to collect user feedback."""
-    
     user_query = state["input"]
     intent=state["intent"]
+    feedback = user_query.replace("give feedback", "").replace("my feedback is", "").strip()
+
+    match = re.search(r"ORD\d{4}", feedback.upper())
+    record_id = match.group(0) if match else None
+
+    if not record_id:
+        for msg in reversed(state.get("chat_history", [])):
+            content = getattr(msg, "content", "")
+            m = re.search(r"ORD\d{4}", content.upper())
+            if m:
+                record_id = m.group(0)
+                break
+
+
 
     print(f"\n--- Calling Feedback Tool for: '{user_query}' ---")
     # Assuming the entire input is the feedback for simplicity in this demo
-    feedback = user_query.replace("give feedback", "").replace("my feedback is", "").strip()
-    output = register_feedback(intent,feedback)
+    output = register_feedback(intent,feedback,record_id)
     return {"tool_output": output}
 
 
@@ -174,8 +186,19 @@ def call_defer_human_tool(state: AgentState) -> dict:
     user_query = state["input"]
     intent=state["intent"]
 
+    match = re.search(r"ORD\d{4}", user_query.upper())
+    record_id = match.group(0) if match else None
+
+    if not record_id:
+        for msg in reversed(state.get("chat_history", [])):
+            content = getattr(msg, "content", "")
+            m = re.search(r"ORD\d{4}", content.upper())
+            if m:
+                record_id = m.group(0)
+                break
+
     print(f"\n--- Calling Defer Human Tool for: '{user_query}' ---")
-    output = defer_to_human(user_query,intent)
+    output = defer_to_human(user_query,intent,record_id)
     return {"tool_output": output}
 
 
