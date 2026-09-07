@@ -1,0 +1,39 @@
+======================================================================
+CARTMIND AGENTIC E-COMMERCE SUPPORT
+MCP SERVER DEMONSTRATION
+======================================================================
+
+Execution time: 2026-09-07 12:01:29
+
+ARCHITECTURE
+----------------------------------------------------------------------
+1. JSON file contains customer/order record IDs
+2. MCP client reads the record IDs
+3. Client connects to FastMCP server using SSE
+4. Client discovers available MCP tools
+5. Client calls check_order_status for each record
+6. MCP server queries the SQLite database
+7. Server calculates the escalation score
+8. Client receives and saves the server response
+
+SERVER
+----------------------------------------------------------------------
+URL: http://127.0.0.1:8000/sse
+
+INPUT RECORDS
+----------------------------------------------------------------------
+- ORD0001
+- ORD0002
+
+SERVER OUTPUT
+----------------------------------------------------------------------
+
+Record ID: ORD0001
+"CallToolResult(content=[TextContent(type='text', text='{\"record_id\":\"ORD0001\",\"category\":\"Apparel\",\"status\":\"Placed\",\"order_value_inr\":704,\"days_since_created\":23,\"delayed_shipment\":false,\"escalation_score\":0.5367}', annotations=None, meta=None)], structured_content={'record_id': 'ORD0001', 'category': 'Apparel', 'status': 'Placed', 'order_value_inr': 704, 'days_since_created': 23, 'delayed_shipment': False, 'escalation_score': 0.5367}, meta=None, data={'record_id': 'ORD0001', 'category': 'Apparel', 'status': 'Placed', 'order_value_inr': 704, 'days_since_created': 23, 'delayed_shipment': False, 'escalation_score': 0.5367}, is_error=False)"
+
+Record ID: ORD0002
+"CallToolResult(content=[TextContent(type='text', text='{\"record_id\":\"ORD0002\",\"category\":\"Apparel\",\"status\":\"Shipped\",\"order_value_inr\":1643,\"days_since_created\":23,\"delayed_shipment\":true,\"escalation_score\":0.8367}', annotations=None, meta=None)], structured_content={'record_id': 'ORD0002', 'category': 'Apparel', 'status': 'Shipped', 'order_value_inr': 1643, 'days_since_created': 23, 'delayed_shipment': True, 'escalation_score': 0.8367}, meta=None, data={'record_id': 'ORD0002', 'category': 'Apparel', 'status': 'Shipped', 'order_value_inr': 1643, 'days_since_created': 23, 'delayed_shipment': True, 'escalation_score': 0.8367}, is_error=False)"
+
+======================================================================
+DEMONSTRATION COMPLETE
+======================================================================
