@@ -95,8 +95,10 @@ def classify_intent(state: AgentState) -> dict:
 
 
 def call_sql_tool(state: AgentState) -> dict:
+    
 
     """Calls the check_order_status tool with the extracted record_id."""
+    
     user_query = state["input"]
     # Simple regex to extract record_id, assuming format like 'ORDXXXX'
     match = re.search(r"ORD\d{4}", user_query.upper())
@@ -211,6 +213,8 @@ def call_defer_human_tool(state: AgentState) -> dict:
     before_sleep=before_sleep_log(logger,logging.WARNING)
 )
 def generate_response(state: AgentState) -> dict:
+    
+
     """Call model, parse JSON, validate — return trusted dict or raise ValueError."""
 
     client = Groq(api_key=api_key)  # Key from env, never hard-coded
