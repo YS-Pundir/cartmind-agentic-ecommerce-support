@@ -1,0 +1,17 @@
+{
+    "project": "CartMind Agentic E-Commerce Support",
+    "server_url": "http://127.0.0.1:8000/sse",
+    "processed_records": 2,
+    "results": [
+        {
+            "record_id": "ORD0001",
+            "success": true,
+            "server_response": "CallToolResult(content=[TextContent(type='text', text='{\"record_id\":\"ORD0001\",\"category\":\"Apparel\",\"status\":\"Placed\",\"order_value_inr\":704,\"days_since_created\":23,\"delayed_shipment\":false,\"escalation_score\":0.5367}', annotations=None, meta=None)], structured_content={'record_id': 'ORD0001', 'category': 'Apparel', 'status': 'Placed', 'order_value_inr': 704, 'days_since_created': 23, 'delayed_shipment': False, 'escalation_score': 0.5367}, meta=None, data={'record_id': 'ORD0001', 'category': 'Apparel', 'status': 'Placed', 'order_value_inr': 704, 'days_since_created': 23, 'delayed_shipment': False, 'escalation_score': 0.5367}, is_error=False)"
+        },
+        {
+            "record_id": "ORD0002",
+            "success": true,
+            "server_response": "CallToolResult(content=[TextContent(type='text', text='{\"record_id\":\"ORD0002\",\"category\":\"Apparel\",\"status\":\"Shipped\",\"order_value_inr\":1643,\"days_since_created\":23,\"delayed_shipment\":true,\"escalation_score\":0.8367}', annotations=None, meta=None)], structured_content={'record_id': 'ORD0002', 'category': 'Apparel', 'status': 'Shipped', 'order_value_inr': 1643, 'days_since_created': 23, 'delayed_shipment': True, 'escalation_score': 0.8367}, meta=None, data={'record_id': 'ORD0002', 'category': 'Apparel', 'status': 'Shipped', 'order_value_inr': 1643, 'days_since_created': 23, 'delayed_shipment': True, 'escalation_score': 0.8367}, is_error=False)"
+        }
+    ]
+}
