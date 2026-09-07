@@ -3,6 +3,7 @@ from src.agent.graph import build_workflow
 import src.logging_config
 from src.config import conversations_file_loc
 from src.memory.conversation import ConversationMemory
+from src.memory.conversation_sql import _to_messages
 from src.agent.graph import memory
 from src.resilience.timeouts import invoke_with_global_timeout
 from concurrent.futures import TimeoutError as FutureTimeoutError
@@ -10,13 +11,11 @@ from concurrent.futures import TimeoutError as FutureTimeoutError
 MEMORY_FILE = conversations_file_loc
 
 
-
-
 def run_agent(
     query: str,
-    conversation_id: str,
-    con_memory: ConversationMemory,
-    thread_id:str
+    thread_id:str,
+    con_memory:ConversationMemory,
+    conversation_id:str 
 ):
     """
     Run one turn of the LangGraph agent using persisted memory.
@@ -28,14 +27,21 @@ def run_agent(
 
     history = con_memory.get_history(conversation_id)
 
+    if history:
+        print(
+            f"\n[Memory] Loaded {len(history)} ")
+    else:
+        print("\n[Memory] Fresh conversation.")
+
+    chat_history = _to_messages(history)
+
     # ---------------------------------------------------------
     # 2. Build LangGraph state
     # ---------------------------------------------------------
 
     state = {
         "input": query,
-        "chat_history": history,
-    }
+        "chat_history":chat_history,}
 
     config = { "configurable": { "thread_id": thread_id, } }
 
@@ -66,6 +72,7 @@ def run_agent(
     # 5. Persist the new exchange
     # ---------------------------------------------------------
 
+    
     con_memory.add_exchange(
         conversation_id=conversation_id,
         user_message=query,
