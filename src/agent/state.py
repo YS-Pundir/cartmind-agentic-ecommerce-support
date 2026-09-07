@@ -2,7 +2,7 @@ from typing import TypedDict
 from langchain_core.messages import BaseMessage
 
 # Define the agent state
-class AgentState(TypedDict):
+class AgentState(TypedDict,total=False):
     record_id:str
     input: str
     chat_history: list[BaseMessage]
