@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+import os
 import json
 from pathlib import Path
 from typing import Any
@@ -12,7 +12,7 @@ class ConversationMemory:
     Each conversation is identified by a conversation_id.
     """
 
-    def __init__(self, file_path: str = conversations_file_loc):
+    def __init__(self):
         self.file_path = conversations_file_loc
         self.file_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -104,6 +104,7 @@ class ConversationMemory:
                 },
             ]
         )
+        print("exchange done")
 
         self._save(data)
 
@@ -134,3 +135,24 @@ class ConversationMemory:
         Return the number of persisted conversations.
         """
         return len(self._load())
+
+
+    def get_next_conversation_id(self) -> str:
+        """Scans the memory file for numeric string keys and returns the next incremented ID."""
+        data = self._load()
+
+        if not data:
+            return "1001"
+
+        numeric_vals = []
+        for key in data.keys():
+            try:
+                numeric_vals.append(int(key))
+            except ValueError:
+                continue
+
+        if not numeric_vals:
+            return "1001"
+
+        return str(max(numeric_vals) + 1)
+    
