@@ -20,6 +20,8 @@ from src.config import (api_key,
                         resp_gen_schema,
                         resp_gen_temp)
 
+from src.llm_client import get_llm_client
+
 from src.structured_output.safe_parse import safe_parse_model_json
 from src.structured_output.validate_ticket import validate_or_raise
 import os
@@ -217,7 +219,8 @@ def generate_response(state: AgentState) -> dict:
 
     """Call model, parse JSON, validate — return trusted dict or raise ValueError."""
 
-    client = Groq(api_key=api_key)  # Key from env, never hard-coded
+    #client = Groq(api_key=api_key)  # Key from env, never hard-coded
+    client=get_llm_client()
 
     intent=state["intent"]
     tool_output=state["tool_output"]
