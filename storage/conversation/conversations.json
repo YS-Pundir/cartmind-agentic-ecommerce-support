@@ -415,5 +415,45 @@
         "content": "Feedback registered successfully!"
       }
     ]
+  },
+  "46757856": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "give me order details of ORD0036"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0036', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 4718, 'days_since_created': 30, 'delayed_shipment': False, 'escalation_score': 0.7}"
+      },
+      {
+        "role": "user",
+        "content": "what is refund window for it"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order Details (as provided):**  \n- **Record ID:** ORD0036  \n- **Category:** Home  \n- **Status:** Shipped  \n- **Order Value:** ₹ 4,718  \n- **Days Since Created:** 30  \n- **Delayed Shipment:** No  \n- **Escalation Score:** 0.7  \n\n**Refund / Return Window:**  \nThe policy documents list return windows for specific product categories such as Clothing, Footwear, Electronics, Small appliances, Large appliances, Furniture, Beauty, etc. The “Home” category is not defined in the provided return‑window table, so I don’t have enough information in my knowledge base to specify the refund window for this order.  \n\nIf you can provide a more specific product type (e.g., Furniture, Small appliance, Large appliance, etc.), I’ll be able to tell you the applicable return period."
+      }
+    ]
+  },
+  "46757857": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "can i please have order status for ORD0045"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0045', 'category': 'Apparel', 'status': 'Delivered', 'order_value_inr': 672, 'days_since_created': 18, 'delayed_shipment': False, 'escalation_score': 0.42}"
+      },
+      {
+        "role": "user",
+        "content": "what would be return or refund window for that ?"
+      },
+      {
+        "role": "assistant",
+        "content": "**Order Status (ORD0045)**  \n- **Current status:** Delivered  \n- **Days since delivery:** 18 days  \n\n**Return / Refund Window for Apparel (Clothing)**  \n- **Standard return period:** 30 calendar days from the confirmed delivery date.  \n- **Remaining time to initiate a return:** 30 – 18 = **12 days** left.  \n\n**Conditions for a valid return**  \n- The item must be **unworn, unwashed, free of odors, stains, pet hair, or any other signs of use**.  \n- Original tags (if supplied) must be retained.  \n\n**Refund / Exchange options**  \n- If the above conditions are met, you are eligible for a **refund or exchange**.  \n- The return process follows these steps: request → eligibility validation → return authorization → physical receipt → inspection → refund initiation → payment‑provider processing → confirmation on your account.  \n\n**What to do next**  \n1. Initiate the return request within the next 12 days (before the 30‑day window closes).  \n2. Ensure the product meets the condition requirements listed above.  \n3. Follow the return instructions that will be provided (e.g., pick‑up or drop‑off).  \n\nIf you need assistance with initiating the return or have any other questions, feel free to let me know!"
+      }
+    ]
   }
 }

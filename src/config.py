@@ -58,3 +58,5 @@ conversations_file_loc=project_root/"storage"/"conversation"/"conversations.json
 
 checkpoint_conn_loc=project_root/"storage"/"checkpoints"/"checkpoints.sqlite"
 
+_REQUEST_LOG_FILE=project_root/"logs"/"agent_run"/"requests.jsonl"
+
