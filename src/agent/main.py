@@ -6,7 +6,9 @@ Run with:
 
 This file only *exposes* the existing terminal agent (src/agent/agent.py) and
 the existing RAG ingestion pipeline (src/rag/*) over HTTP. No logic inside
-src/ was changed beyond src/agent/agent.py's new resume support.
+src/ was changed beyond src/agent/agent.py's new resume support, and the
+new src/observability/request_logging.py module (structured per-request
+JSON-Lines logging - see docstring there).
 
 Endpoints
 ---------
@@ -45,6 +47,11 @@ Design notes
   src.rag.vector_store.build_storages() already has) rather than just the
   new file - flagged here rather than silently "fixed" since only main.py
   was asked for.
+* Request logging: every /api/chat and /api/threads/{id}/resume call is
+  logged as one JSON-Lines entry (trace id, thread id, duration, masked
+  request/response text) via src.observability.request_logging.log_request.
+  This is separate from the retry-warning logging already configured in
+  src/logging_config.py / used by nodes.py's generate_response().
 """
 
 from __future__ import annotations
@@ -62,6 +69,7 @@ from pydantic import BaseModel, Field, model_validator
 from src.agent.agent import get_thread_status, run_agent
 from src.config import chroma_loc, conversations_file_loc, kd_loc
 from src.memory.conversation import ConversationMemory
+from src.observability.request_logging import log_request, new_trace_id
 from src.rag.chunking import fixed_chunking
 from src.rag.embeddings import create_embedding
 from src.rag.loader import load_markdown_documents
@@ -121,6 +129,7 @@ class ChatResponse(BaseModel):
     thread_id: str
     answer: str
     resumed: bool = False
+    trace_id: Optional[str] = None
 
 
 class Message(BaseModel):
@@ -198,44 +207,68 @@ def chat(req: ChatRequest) -> ChatResponse:
     Set `resume: true` (with `thread_id`) to continue a run that was
     interrupted mid-graph, instead of starting a new turn.
     """
+    trace_id = new_trace_id()
+
     if req.resume:
         thread_id = req.thread_id
-        try:
-            answer = run_agent(
-                query=req.message or "",
-                conversation_id=thread_id,
-                con_memory=con_memory,
-                thread_id=thread_id,
-                resume=True,
-            )
-        except Exception as exc:
-            raise HTTPException(status_code=500, detail=f"Resume failed: {exc}") from exc
+        with log_request(
+            "/api/chat",
+            thread_id=thread_id,
+            request_text=req.message,
+            trace_id=trace_id,
+            extra={"resume": True},
+        ) as ctx:
+            try:
+                answer = run_agent(
+                    query=req.message or "",
+                    conversation_id=thread_id,
+                    con_memory=con_memory,
+                    thread_id=thread_id,
+                    resume=True,
+                )
+            except Exception as exc:
+                raise HTTPException(status_code=500, detail=f"Resume failed: {exc}") from exc
+            ctx["response_text"] = answer
 
-        return ChatResponse(thread_id=thread_id, answer=answer, resumed=True)
+        return ChatResponse(thread_id=thread_id, answer=answer, resumed=True, trace_id=trace_id)
 
     thread_id = req.thread_id or con_memory.get_next_conversation_id()
 
-    try:
-        answer = run_agent(
-            query=req.message,
-            conversation_id=thread_id,
-            con_memory=con_memory,
-            thread_id=thread_id,
-        )
-    except Exception as exc:
-        # LangGraph may have already checkpointed partial progress under
-        # `thread_id` (e.g. classify_intent succeeded before a downstream
-        # node raised). For a brand-new thread the client never had this id
-        # to begin with, so a plain HTTPException here would strand it -
-        # the frontend would have no thread_id to ask /state about, and the
-        # resume flow could never trigger. Returning it in the body fixes
-        # that.
-        return JSONResponse(
-            status_code=500,
-            content={"detail": f"Agent failed: {exc}", "thread_id": thread_id},
-        )
+    with log_request(
+        "/api/chat",
+        thread_id=thread_id,
+        request_text=req.message,
+        trace_id=trace_id,
+        extra={"resume": False},
+    ) as ctx:
+        try:
+            answer = run_agent(
+                query=req.message,
+                conversation_id=thread_id,
+                con_memory=con_memory,
+                thread_id=thread_id,
+            )
+        except Exception as exc:
+            # LangGraph may have already checkpointed partial progress under
+            # `thread_id` (e.g. classify_intent succeeded before a downstream
+            # node raised). For a brand-new thread the client never had this id
+            # to begin with, so a plain HTTPException here would strand it -
+            # the frontend would have no thread_id to ask /state about, and the
+            # resume flow could never trigger. Returning it in the body fixes
+            # that.
+            ctx["status"] = "error"
+            ctx["error"] = f"{type(exc).__name__}: {exc}"
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "detail": f"Agent failed: {exc}",
+                    "thread_id": thread_id,
+                    "trace_id": trace_id,
+                },
+            )
+        ctx["response_text"] = answer
 
-    return ChatResponse(thread_id=thread_id, answer=answer, resumed=False)
+    return ChatResponse(thread_id=thread_id, answer=answer, resumed=False, trace_id=trace_id)
 
 
 # ---------------------------------------------------------------------------
@@ -302,18 +335,28 @@ def resume_thread(thread_id: str) -> ChatResponse:
 
     Equivalent to POST /api/chat with {"thread_id": thread_id, "resume": true}.
     """
-    try:
-        answer = run_agent(
-            query="",
-            conversation_id=thread_id,
-            con_memory=con_memory,
-            thread_id=thread_id,
-            resume=True,
-        )
-    except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Resume failed: {exc}") from exc
+    trace_id = new_trace_id()
 
-    return ChatResponse(thread_id=thread_id, answer=answer, resumed=True)
+    with log_request(
+        "/api/threads/{thread_id}/resume",
+        thread_id=thread_id,
+        request_text=None,
+        trace_id=trace_id,
+        extra={"resume": True},
+    ) as ctx:
+        try:
+            answer = run_agent(
+                query="",
+                conversation_id=thread_id,
+                con_memory=con_memory,
+                thread_id=thread_id,
+                resume=True,
+            )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"Resume failed: {exc}") from exc
+        ctx["response_text"] = answer
+
+    return ChatResponse(thread_id=thread_id, answer=answer, resumed=True, trace_id=trace_id)
 
 
 @app.delete("/api/threads/{thread_id}")
