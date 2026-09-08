@@ -7,12 +7,13 @@ from src.config import ( api_key,
 
 from src.rag.retrieval import( retrieve_chunks
                               ,retreiver, retrieve_chunks_with_score)
+from src.llm_client import get_llm_client
 
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain_classic.vectorstores import Chroma
 
 from groq import Groq
-client=Groq(api_key=api_key)
+client=get_llm_client()
 
 # For Api Rate limiting
 import logging
