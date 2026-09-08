@@ -1,0 +1,16 @@
+query_id,query,topic,context_relevance_1_to_5,groundedness_1_to_5,answer_relevance_1_to_5
+1,What is the return window for electronics compared with clothing and other product categories?,return window by product category,5,5,5
+2,"For a cash-on-delivery order that is returned, how long does the refund usually take and when does the timeline start?",COD refund timelines,5,5,5
+3,"What are the standard delivery SLAs, and do they differ by shipping method or destination?",delivery SLAs,3,5,5
+4,"When is reverse pickup available for a return, and what conditions make an order ineligible?",reverse-pickup eligibility,5,4,5
+5,"What warranty coverage applies to different product categories, and are there category-specific warranty periods?",warranty terms by category,5,5,5
+6,"Until what point can a customer cancel an order, and are there different rules before and after shipment?",order-cancellation policy,5,5,5
+7,"How can loyalty points be redeemed, what restrictions apply, and is there a minimum redemption value?",loyalty-points redemption policy,5,5,5
+8,"What should a customer do after a payment fails, and how many times can the payment be retried?",payment-failure/retry policy,4,5,5
+9,"Can a customer exchange an item for a different size, and what conditions and time limit apply?",size-exchange policy,4,5,5
+10,"What is the process for reporting a damaged item, including the evidence required and the deadline for filing a claim?",damaged-item claim process,5,5,5
+11,"Which products or destinations are restricted for international shipping, and what happens if an item cannot be shipped internationally?",international shipping restrictions,3,5,5
+12,"How does the customer-support escalation matrix work, and which issues should be escalated to higher support levels?",customer-support escalation matrix,5,5,5
+13,"An international COD order arrives damaged after the normal delivery SLA. Can the customer request reverse pickup and a refund, and which support level should handle it?",edge case: combined policy scenario,3,3,3
+14,Can you recommend three good restaurants in Berlin for a romantic dinner tonight?,out of scope,1,5,1
+15,What is Nimbus Commerce's employee vacation policy and annual salary bands?,out of scope / hallucination check,1,5,5
