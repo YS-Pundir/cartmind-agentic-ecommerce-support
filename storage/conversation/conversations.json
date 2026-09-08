@@ -455,5 +455,57 @@
         "content": "**Order Status (ORD0045)**  \n- **Current status:** Delivered  \n- **Days since delivery:** 18 days  \n\n**Return / Refund Window for Apparel (Clothing)**  \n- **Standard return period:** 30 calendar days from the confirmed delivery date.  \n- **Remaining time to initiate a return:** 30 – 18 = **12 days** left.  \n\n**Conditions for a valid return**  \n- The item must be **unworn, unwashed, free of odors, stains, pet hair, or any other signs of use**.  \n- Original tags (if supplied) must be retained.  \n\n**Refund / Exchange options**  \n- If the above conditions are met, you are eligible for a **refund or exchange**.  \n- The return process follows these steps: request → eligibility validation → return authorization → physical receipt → inspection → refund initiation → payment‑provider processing → confirmation on your account.  \n\n**What to do next**  \n1. Initiate the return request within the next 12 days (before the 30‑day window closes).  \n2. Ensure the product meets the condition requirements listed above.  \n3. Follow the return instructions that will be provided (e.g., pick‑up or drop‑off).  \n\nIf you need assistance with initiating the return or have any other questions, feel free to let me know!"
       }
     ]
+  },
+  "46757858": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "give me coupons policy of the store"
+      },
+      {
+        "role": "assistant",
+        "content": "**Coupons / Promotional Discount Policy (Nimbus Commerce)**  \n\n| Aspect | Details |\n|--------|---------|\n| **General Rule** | All promotional codes (coupons) are governed by the specific terms of the campaign they belong to. |\n| **Common Restrictions** | • Minimum basket value required  <br>• Only eligible product categories can be used  <br>• One coupon per order  <br>• May be limited to certain customer accounts  <br>• Campaign expiration date applies  <br>• Geographic restrictions may apply  <br>• May be limited to specific sellers  <br>• Cannot be applied to items already discounted |\n| **Cash Conversion** | A coupon **cannot** be converted to cash under normal circumstances. |\n| **Failed Coupon Application** | 1. Customer should first verify that the order meets all campaign requirements (minimum spend, eligible items, etc.). <br>2. Support can manually investigate **only** if the customer provides enough information to reproduce the issue (e.g., coupon code, order details, screenshots). |\n| **Returns After Using a Coupon** | When a product from a multi‑item order that used a coupon is returned, the refund engine **re‑calculates the discount**. The customer should **not expect** to receive the full undiscounted price of the returned item. |\n| **Price Adjustments** | Nimbus may provide a price‑adjustment **within 7 days** if a price change (not a coupon) causes a qualifying difference. Promotional coupon differences are **excluded** unless the specific promotion states otherwise. |\n\n**Key Takeaway:** Coupons work only under the exact terms of each promotion, have several standard restrictions, cannot be turned into cash, and any issues (failed application, returns, price changes) are handled according to the rules above. If you need help with a specific coupon, please provide the coupon code and order details so we can verify eligibility."
+      },
+      {
+        "role": "user",
+        "content": "i need refund policy as well"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the knowledge base: Scenario-Based Policy Examples\nScenario A — Clothing return on day 28\nCustomer received a jacket 28 calendar days ago and wants a refund because the size is wrong. Scenario-Based Policy Examples\nScenario A — Clothing return on day 28\nCustomer received a jacket 28 calendar days ago and wants a refund because the size is wrong. Appendix A — Compact Policy Reference\nTopic Core rule\nClothing returns 30 days\nFootwear returns 30 days\nElectronics returns 14 days\nSmall-appliance returns 21 days\nLarge-appliance returns 14 days\nFurniture returns 14 days\nUnopened beauty 30 days\nOpened hygiene products Generally non-returnable\nCOD refund initiation Within 3 business days after inspection\nCOD bank posting Typically additional 2–5 business days\nStandard delivery 2–7 business days total\nExpress delivery 1–3 business days total\nTransit-damage reporting Normally within 48 hours\nClothing/footwear size exchange Within return window\nLoyalty redemption Minimum 500 points\nLoyalty conversion 100 points = €1\nLoyalty maximum 30% of eligible merchandise subtotal\nLoyalty expiration Normally 12 months after earning month\nOrder cancellation Usually before packing/shipping\nElectronics warranty 12–24 months depending on category\nFurniture warranty 12 months\nInternational restrictions Product and destination dependent\nPrivacy escalation Privacy Team\nPayment duplicate-charge escalation Payments/Finance\n1\n ###Source: D:\\cartmind-agentic-ecommerce-support\\data\\policy_docs\\nimbus_kb_split_by_topic\\33_appendix_a_compact_policy_reference.pdf\n\n ."
+      },
+      {
+        "role": "user",
+        "content": "thanks thats all i wanted"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know — the retrieved context doesn't contain a clear answer to that question."
+      },
+      {
+        "role": "user",
+        "content": "order info for ORD0008"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0008', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 6019, 'days_since_created': 13, 'delayed_shipment': False, 'escalation_score': 0.3033}"
+      },
+      {
+        "role": "user",
+        "content": "thanks for helping"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know — the retrieved context doesn't contain a clear answer to that question."
+      },
+      {
+        "role": "user",
+        "content": "thanks for helping"
+      },
+      {
+        "role": "assistant",
+        "content": "You’re very welcome! If you have any other questions or need further assistance, just let me know."
+      }
+    ]
   }
 }
