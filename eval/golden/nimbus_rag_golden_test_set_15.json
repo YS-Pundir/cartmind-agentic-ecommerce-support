@@ -1,0 +1,247 @@
+{
+  "name": "Nimbus Commerce RAG Triad Evaluation Set",
+  "version": "1.0",
+  "total_queries": 15,
+  "required_topics_covered": 12,
+  "edge_or_out_of_scope_queries": 3,
+  "scoring": {
+    "scale": "1-5",
+    "minimum_score": 1,
+    "maximum_score": 5,
+    "metrics": [
+      "context_relevance",
+      "groundedness",
+      "answer_relevance"
+    ],
+    "interpretation": {
+      "1": "Very poor",
+      "2": "Poor",
+      "3": "Partially satisfactory",
+      "4": "Good",
+      "5": "Excellent"
+    }
+  },
+  "queries": [
+    {
+      "id": 1,
+      "topic": "return window by product category",
+      "query": "What is the return window for electronics compared with clothing and other product categories?",
+      "type": "in_scope"
+    },
+    {
+      "id": 2,
+      "topic": "COD refund timelines",
+      "query": "For a cash-on-delivery order that is returned, how long does the refund usually take and when does the timeline start?",
+      "type": "in_scope"
+    },
+    {
+      "id": 3,
+      "topic": "delivery SLAs",
+      "query": "What are the standard delivery SLAs, and do they differ by shipping method or destination?",
+      "type": "in_scope"
+    },
+    {
+      "id": 4,
+      "topic": "reverse-pickup eligibility",
+      "query": "When is reverse pickup available for a return, and what conditions make an order ineligible?",
+      "type": "in_scope"
+    },
+    {
+      "id": 5,
+      "topic": "warranty terms by category",
+      "query": "What warranty coverage applies to different product categories, and are there category-specific warranty periods?",
+      "type": "in_scope"
+    },
+    {
+      "id": 6,
+      "topic": "order-cancellation policy",
+      "query": "Until what point can a customer cancel an order, and are there different rules before and after shipment?",
+      "type": "in_scope"
+    },
+    {
+      "id": 7,
+      "topic": "loyalty-points redemption policy",
+      "query": "How can loyalty points be redeemed, what restrictions apply, and is there a minimum redemption value?",
+      "type": "in_scope"
+    },
+    {
+      "id": 8,
+      "topic": "payment-failure/retry policy",
+      "query": "What should a customer do after a payment fails, and how many times can the payment be retried?",
+      "type": "in_scope"
+    },
+    {
+      "id": 9,
+      "topic": "size-exchange policy",
+      "query": "Can a customer exchange an item for a different size, and what conditions and time limit apply?",
+      "type": "in_scope"
+    },
+    {
+      "id": 10,
+      "topic": "damaged-item claim process",
+      "query": "What is the process for reporting a damaged item, including the evidence required and the deadline for filing a claim?",
+      "type": "in_scope"
+    },
+    {
+      "id": 11,
+      "topic": "international shipping restrictions",
+      "query": "Which products or destinations are restricted for international shipping, and what happens if an item cannot be shipped internationally?",
+      "type": "in_scope"
+    },
+    {
+      "id": 12,
+      "topic": "customer-support escalation matrix",
+      "query": "How does the customer-support escalation matrix work, and which issues should be escalated to higher support levels?",
+      "type": "in_scope"
+    },
+    {
+      "id": 13,
+      "topic": "edge case: combined policy scenario",
+      "query": "An international COD order arrives damaged after the normal delivery SLA. Can the customer request reverse pickup and a refund, and which support level should handle it?",
+      "type": "edge_case"
+    },
+    {
+      "id": 14,
+      "topic": "out of scope",
+      "query": "Can you recommend three good restaurants in Berlin for a romantic dinner tonight?",
+      "type": "out_of_scope"
+    },
+    {
+      "id": 15,
+      "topic": "out of scope / hallucination check",
+      "query": "What is Nimbus Commerce's employee vacation policy and annual salary bands?",
+      "type": "out_of_scope"
+    }
+  ],
+  "evaluation_output_schema": {
+    "id": "integer",
+    "query": "string",
+    "topic": "string",
+    "retrieved_context": "string",
+    "generated_answer": "string",
+    "scores": {
+      "context_relevance": {
+        "score": "integer 1-5",
+        "reason": "string"
+      },
+      "groundedness": {
+        "score": "integer 1-5",
+        "reason": "string"
+      },
+      "answer_relevance": {
+        "score": "integer 1-5",
+        "reason": "string"
+      }
+    }
+  },
+  "aggregate_output": {
+    "average_context_relevance": "sum of 15 context_relevance scores / 15",
+    "average_groundedness": "sum of 15 groundedness scores / 15",
+    "average_answer_relevance": "sum of 15 answer_relevance scores / 15",
+    "overall_average": "mean of the three metric averages"
+  },
+  "kb_archive_files_detected": [
+    "00 nimbus commerce e commerce customer support knowledge base",
+    "01 customer support policy overview",
+    "02 return window by product category",
+    "03 return conditions and refund eligibility",
+    "04 cod refund timelines",
+    "05 delivery slas",
+    "06 reverse pickup eligibility",
+    "07 warranty terms by category",
+    "08 order cancellation policy",
+    "09 loyalty points redemption policy",
+    "10 payment failure and retry policy",
+    "11 size exchange policy",
+    "12 damaged item claim process",
+    "13 international shipping restrictions",
+    "14 customer support escalation matrix",
+    "15 missing delayed or lost package policy",
+    "16 wrong item and incorrect quantity policy",
+    "17 partial shipment and split order policy",
+    "18 address change policy",
+    "19 promotional discount and coupon policy",
+    "20 gift card and store credit policy",
+    "21 account privacy and security support",
+    "22 product specific final sale rules",
+    "23 marketplace and seller fulfilled orders",
+    "24 subscription and recurring orders",
+    "25 refund calculation rules",
+    "26 fraud abuse and repeated return review",
+    "27 customer communication standards",
+    "28 operational definitions",
+    "29 frequently asked questions",
+    "30 scenario based policy examples",
+    "31 knowledge base retrieval notes",
+    "32 policy change and version control rules",
+    "33 appendix a compact policy reference",
+    "34 appendix b agent decision sequence",
+    "35 appendix c recommended rag evaluation questions",
+    "36 appendix d synthetic data design notes",
+    "37 nimbus commerce order merge consolidation policy"
+  ],
+  "llm_judges": {
+    "context_relevance": {
+      "judge_id": "judge_context_relevance",
+      "purpose": "Evaluate only whether the retrieved context is relevant and useful for answering the query.",
+      "score_range": "1-5",
+      "rubric": {
+        "1": "Context is irrelevant or contains no useful information for the query.",
+        "2": "Context has very limited relevance and does not meaningfully support the query.",
+        "3": "Context is partially relevant but important information is missing or mixed with unrelated content.",
+        "4": "Context is mostly relevant and provides enough useful information to answer most of the query.",
+        "5": "Context is directly relevant, focused, and sufficiently covers the information needed to answer the query."
+      },
+      "prompt": "You are LLM Judge 1 for a RAG evaluation.\nEvaluate ONLY CONTEXT RELEVANCE.\n\nGiven:\n- User query\n- Retrieved context\n\nDetermine how relevant and useful the retrieved context is for answering the user's query.\n\nScore from 1 to 5:\n1 = Very poor: context is irrelevant or unusable.\n2 = Poor: very limited relevant information.\n3 = Partial: some relevant information, but important information is missing or mixed with unrelated content.\n4 = Good: mostly relevant and sufficiently useful.\n5 = Excellent: directly relevant, focused, and sufficient.\n\nDo NOT judge whether the generated answer is correct. Judge only the retrieved context.\n\nReturn strict JSON only:\n{\n  \"score\": 1-5,\n  \"reason\": \"brief explanation\"\n}"
+    },
+    "groundedness": {
+      "judge_id": "judge_groundedness",
+      "purpose": "Evaluate whether the generated answer is supported by the retrieved context and avoids unsupported claims.",
+      "score_range": "1-5",
+      "rubric": {
+        "1": "Answer is substantially unsupported or hallucinated.",
+        "2": "Many important claims are unsupported by the context.",
+        "3": "Some claims are supported, but there are noticeable unsupported claims or omissions.",
+        "4": "Most claims are supported, with only minor unsupported details.",
+        "5": "All material claims are clearly supported by the retrieved context; no material hallucination."
+      },
+      "prompt": "You are LLM Judge 2 for a RAG evaluation.\nEvaluate ONLY GROUNDEDNESS.\n\nGiven:\n- User query\n- Retrieved context\n- Generated answer\n\nDetermine whether the generated answer is supported by the retrieved context.\n\nScore from 1 to 5:\n1 = Very poor: answer is substantially unsupported or hallucinated.\n2 = Poor: many important claims are unsupported.\n3 = Partial: some claims are supported, but noticeable unsupported claims exist.\n4 = Good: most claims are supported with only minor unsupported details.\n5 = Excellent: all material claims are grounded in the retrieved context and there is no material hallucination.\n\nDo NOT reward an answer merely because it sounds plausible. Evidence must come from the retrieved context.\n\nFor out-of-scope questions, an answer that correctly says the information is not available in the KB should receive a high groundedness score if that conclusion is consistent with the provided context.\n\nReturn strict JSON only:\n{\n  \"score\": 1-5,\n  \"reason\": \"brief explanation\"\n}"
+    },
+    "answer_relevance": {
+      "judge_id": "judge_answer_relevance",
+      "purpose": "Evaluate whether the generated answer directly, completely, and appropriately addresses the user's query.",
+      "score_range": "1-5",
+      "rubric": {
+        "1": "Answer does not address the query.",
+        "2": "Answer barely addresses the query and misses most important requirements.",
+        "3": "Answer partially addresses the query but is incomplete or contains significant irrelevant material.",
+        "4": "Answer directly addresses the query and is mostly complete.",
+        "5": "Answer directly, completely, and precisely addresses the query without unnecessary information."
+      },
+      "prompt": "You are LLM Judge 3 for a RAG evaluation.\nEvaluate ONLY ANSWER RELEVANCE.\n\nGiven:\n- User query\n- Generated answer\n\nDetermine how directly and completely the answer addresses the user's query.\n\nScore from 1 to 5:\n1 = Very poor: does not answer the query.\n2 = Poor: barely addresses the query.\n3 = Partial: answers some of the query but is incomplete or includes significant irrelevant material.\n4 = Good: directly answers the query and is mostly complete.\n5 = Excellent: directly, completely, and precisely answers the query.\n\nFor out-of-scope questions, a concise answer explaining that the request is outside the available KB can be highly relevant if that is the appropriate response. Do not reward hallucinated answers.\n\nReturn strict JSON only:\n{\n  \"score\": 1-5,\n  \"reason\": \"brief explanation\"\n}"
+    }
+  },
+  "evaluation_pipeline": {
+    "description": "Run three independent LLM judges for every query.",
+    "steps": [
+      "Run the RAG system for each of the 15 queries.",
+      "Capture the retrieved context and generated answer.",
+      "Send query + retrieved context to Judge 1 for context relevance.",
+      "Send query + retrieved context + generated answer to Judge 2 for groundedness.",
+      "Send query + generated answer to Judge 3 for answer relevance.",
+      "Record all three scores from 1 to 5.",
+      "Calculate the average of each metric across all 15 queries."
+    ],
+    "llm_runtime": "MOCK_LLM",
+    "judge_count": 3,
+    "scores_per_query": 3
+  },
+  "result_table_columns": [
+    "query_id",
+    "query",
+    "topic",
+    "context_relevance_1_to_5",
+    "groundedness_1_to_5",
+    "answer_relevance_1_to_5"
+  ]
+}
