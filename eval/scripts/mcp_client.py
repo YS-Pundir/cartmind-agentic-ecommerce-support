@@ -15,7 +15,7 @@ SERVER_URL = "http://127.0.0.1:8000/sse"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-INPUT_FILE = BASE_DIR /"golden"/"record_ids.json"
+INPUT_FILE = BASE_DIR /"golden"/"mcp_golden_record_ids.json"
 RESULTS_FILE = BASE_DIR /"results"/"mcp_results.json"
 DEMO_FILE = BASE_DIR /"insights"/"mcp_demonstration.txt"
 
