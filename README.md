@@ -13,6 +13,10 @@
 ![Offline](https://img.shields.io/badge/Runs-100%25%20Offline%20(MOCK__LLM%3Dtrue)-success)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
 
+
+*Built as a capstone project for the Nykaa (E-commerce & Retail) track.*
+
+
 </div>
 
 ---
@@ -402,8 +406,3 @@ Honest scoping of what this system does **not** yet do:
 
 **Apache 2.0** — see [`LICENSE`](./LICENSE).
 
-<div align="center">
-
-*Built as a capstone project for the Nykaa (E-commerce & Retail) track.*
-
-</div>
