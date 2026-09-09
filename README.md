@@ -19,7 +19,7 @@
 
 > **In one line:** Cartmind answers policy questions from a hand-written knowledge base and looks up real order records — it never invents a policy, and it never leaks a phone number or card digit to the model or the logs.
 
-**Everything in this repo runs 100% offline**, under `MOCK_LLM=true`, with **zero API keys** and **zero network calls**. A real Groq key only matters if you deliberately flip that flag.
+**Everything in this repo runs API-key-free**, under `MOCK_LLM=true`, with **zero API keys** and **zero network calls**. A real Groq key only matters if you deliberately flip that flag.
 
 ---
 
@@ -132,78 +132,42 @@ flowchart TD
 A guided tour of the codebase — what lives where, and why.
 
 ```text
-cartmind/
-├── src/
-│   ├── agent/
-│   │   ├── graph.py                 # LangGraph definition — 6 nodes, RetryPolicy, SqliteSaver checkpointing
-│   │   ├── nodes.py                 # classify_intent + all tool-calling node implementations
-│   │   ├── main.py                  # FastAPI app — /api/chat, /api/threads, /api/documents/upload
-│   │   └── terminal_application.py  # CLI chat loop with persisted JSON memory (history/clear/exit)
-│   ├── tools/
-│   │   └── sql_tool.py              # check_order_status + escalation_score logic
-│   ├── rag/
-│   │   └── retrieval.py             # ChromaDB retrieval — wired to kb_fixed_size by default
-│   ├── guardrails/
-│   │   ├── pii.py                   # Keyless regex masking — phone numbers + card digits only
-│   │   └── injection.py             # Fixed-keyword-list prompt-injection detector
-│   ├── structured_output/
-│   │   └── validate_ticket.py       # Validates every response against schema/agent_response.json
-│   ├── resilience/
-│   │   └── timeouts.py              # Per-node and global timeout enforcement
-│   └── llm_client.py                # MOCK_LLM switch — defaults true even with no .env
+cartmind-agentic-ecommerce-support/
 │
-├── mcp_server/
-│   ├── server.py                    # FastMCP server — SSE transport on :8000/sse
-│   └── client.py                    # Reference MCP client pointed at /sse
-│
-├── frontend/
-│   ├── index.html                   # Static chat UI
-│   └── app.js                       # Talks to http://localhost:8000 by default
-│
-├── scripts/
-│   ├── dataset.py                   # generate_order_dataset() — synthetic order generation logic
-│   └── seed.py                      # Seeds orders.db + builds both Chroma collections
+├── config/                     # RAG + response-generation configuration
+├── data/
+│   ├── database/               # SQLite order database
+│   └── policy_docs/             # Nimbus Commerce policy knowledge base
 │
 ├── eval/
-│   ├── scripts/
-│   │   ├── part1_task45.py                    # Threshold calibration + Precision@3/Recall@3
-│   │   ├── missing_implementations_demo.py    # Memory, PII, injection, retry, timeout demos
-│   │   ├── rag_triad_evaluation_mock.py       # 15-query RAG triad harness
-│   │   └── mcp_client.py                      # MCP round-trip test client
-│   ├── golden/
-│   │   ├── nimbus_rag_golden_test_set_15.json # RAG triad golden queries
-│   │   └── mcp_golden_record_ids.json         # Order IDs used for MCP round-trip tests
-│   ├── results/                     # JSON outputs from every eval script
-│   └── insights/                    # Human-readable .md/.txt writeups of eval results
+│   ├── golden/                  # Golden inputs / test sets
+│   ├── results/                 # JSON / CSV evaluation outputs
+│   ├── insights/                # Evaluation demonstrations + analysis
+│   └── scripts/                 # Evaluation runners
 │
-├── data/
-│   ├── database/
-│   │   └── orders.db                # 50 synthetic order records (seed=42)
-│   └── policy_docs/
-│       └── nimbus_kb_split_by_topic/  # 38 synthetic policy PDFs (≥12 topics)
+├── frontend/                    # Browser UI
+├── mcp_server/                  # MCP server + interoperability client
+├── prompts/                     # RAG + response-generation prompts
+├── schema/                      # Structured response schema
 │
-├── storage/
-│   ├── vector_databases/            # kb_fixed_size + kb_sentence_based Chroma collections
-│   ├── conversation/
-│   │   └── conversations.json       # Persisted multi-turn memory, keyed by thread_id
-│   └── checkpoints/
-│       └── checkpoints.sqlite       # LangGraph SqliteSaver checkpoints — enables /resume
+├── scripts/
+│   ├── dataset.py               # Deterministic 50-record generator
+│   └── seed.py                  # SQLite + Chroma seeding
 │
-├── logs/
-│   └── agent_run/
-│       └── requests.jsonl           # Masked, trace-ID'd JSON-Lines log of every chat/resume call
+├── src/
+│   ├── agent/                   # LangGraph + FastAPI
+│   ├── guardrails/              # PII + injection controls
+│   ├── memory/                  # Conversation persistence
+│   ├── observability/           # JSONL + MLflow tracing
+│   ├── rag/                     # Loading, chunking, embeddings, retrieval
+│   ├── resilience/              # Timeout handling
+│   ├── structured_output/       # Safe parsing + validation
+│   └── tools/                   # RAG, SQL, feedback, deferred tools
 │
-├── schema/
-│   └── agent_response.json          # JSON Schema every generate_response output must satisfy
-│
-├── config/
-│   ├── rag_tool.json                 # Real-model config (openai/gpt-oss-120b) — used only if MOCK_LLM=false
-│   └── response_generator.json       # Real-model config (qwen/qwen3.8-27b) — used only if MOCK_LLM=false
-│
-├── .env.example                      # Safe-to-commit template (MOCK_LLM=true, blank api_key)
-├── requirements.txt                  # Frozen deps (UTF-16 — see Setup note)
-├── pyproject.toml                    # Same dependency list as requirements.txt, UTF-8
-└── LICENSE                           # Apache 2.0
+├── storage/                     # Local runtime state
+├── pyproject.toml               # Python 3.13 project metadata
+├── requirements.txt             # Locked dependency versions
+└── README.md                         # Apache 2.0
 ```
 
 > 💡 **Where to start reading:** `src/agent/graph.py` → `src/agent/nodes.py` gives you the whole control flow in two files. From there, follow whichever branch you care about (`src/rag/`, `src/tools/`, `src/guardrails/`).
@@ -369,7 +333,7 @@ python eval/scripts/rag_triad_evaluation_mock.py
 
 | Script | What it prints |
 |---|---|
-| `part1_task45.py` | A calibrated threshold (already checked in at **0.10**, set between an observed in-scope cluster of 0.49–0.74 cosine similarity and an out-of-scope cluster of 0.04–0.17) and per-query Precision@3/Recall@3 for both `kb_fixed_size` and `kb_sentence_based` |
+| `part1_task45.py` | A calibrated threshold and per-query Precision@3/Recall@3 for both `kb_fixed_size` and `kb_sentence_based` |
 | `missing_implementations_demo.py` | Five `PASS`-style sections — memory present, memory absent (fresh thread), PII masked, injection blocked, retry recovered, timeout fired clean |
 | `rag_triad_evaluation_mock.py` | 15 rows of three 0–1 scores plus the three averages |
 
