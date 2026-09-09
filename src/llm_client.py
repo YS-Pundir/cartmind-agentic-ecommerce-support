@@ -33,7 +33,7 @@ from src.rag.mock_llm import MockGroqClient
 
 
 def get_llm_client():
-    use_mock = os.getenv("MOCK_LLM", "true").strip().lower() not in ("false", "0", "no")
+    use_mock = os.getenv("MOCK_LLM", "false").strip().lower() not in ("false", "0", "no")
 
     if use_mock:
         return MockGroqClient()
