@@ -398,7 +398,6 @@ Honest scoping of what this system does **not** yet do:
 - 🧪 **Prompt-injection detection is a fixed keyword list** (`src/guardrails/injection.py`) — it will not catch a rephrased or obfuscated injection attempt.
 - 🔁 **The upload endpoint re-embeds the entire knowledge base**, not just the new file, on every `POST /api/documents/upload` call — fine for a 38-document KB, not fine at scale.
 - 🔌 **The MCP server and the FastAPI app both default to port 8000** — run them one at a time unless you change one of the ports first.
-- 🔑 **A real Groq key must never be committed.** `.env` is git-ignored; if you ever find a live key inside this repo's history, rotate it immediately and remove it from history before making the repo public.
 
 ---
 
