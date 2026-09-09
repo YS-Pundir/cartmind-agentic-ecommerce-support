@@ -66,6 +66,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, model_validator
 
+# main.py, right after the stdlib imports
+from src.observability.mlflow_tracing import setup_tracing
+setup_tracing()
+
 from src.agent.agent import get_thread_status, run_agent
 from src.config import chroma_loc, conversations_file_loc, kd_loc
 from src.memory.conversation import ConversationMemory
