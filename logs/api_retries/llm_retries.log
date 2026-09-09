@@ -1283,3 +1283,409 @@ During task with name 'generate_response' and id '9f12e244-a7ce-37e2-9313-7c714e
 2026-09-08 17:43:10,603 - response_generation - INFO - RESPONSE API CALL
 2026-09-08 17:43:11,436 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-09-08 17:43:11,437 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:21:23,005 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:43,227 - watchfiles.main - INFO - 3 changes detected
+2026-09-09 12:21:43,737 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:44,149 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:44,555 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:44,964 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:45,372 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:45,736 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:46,148 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:46,559 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:46,970 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:47,381 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:47,796 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:48,259 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:48,612 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:49,023 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:49,427 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:49,834 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:21:50,256 - watchfiles.main - INFO - 1 change detected
+2026-09-09 12:24:19,683 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:24:19,684 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:25:01,178 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:25:01,179 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:25:01,182 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:25:01,182 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:25:30,543 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:25:30,544 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:25:30,547 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:25:30,547 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:26:05,846 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:26:05,847 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:26:22,338 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:26:22,338 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:26:54,810 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:26:54,812 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:26:54,816 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:26:54,816 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:28:47,432 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:28:49,712 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:28:49,727 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:28:49,891 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:28:51,127 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:28:51,129 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:29:19,904 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:29:22,211 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:29:22,213 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:29:22,371 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:29:23,791 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:29:23,794 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:30:03,827 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:30:04,352 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:30:04,355 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:30:04,517 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:30:05,646 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:30:05,648 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 12:40:23,010 - rag_generation - INFO - RAG API CALL
+2026-09-09 12:40:24,362 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:40:24,382 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 12:40:24,631 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:40:26,015 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 12:40:26,071 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-09-09 12:40:26,071 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}.
+2026-09-09 12:40:27,214 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 12:40:28,266 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 12:40:28,268 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 13:19:03,617 - rag_generation - INFO - RAG API CALL
+2026-09-09 13:19:05,342 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:19:05,379 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 13:19:05,623 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:05,710 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:05,726 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:05,726 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:06,919 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:07,026 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:07,034 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:07,035 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:09,217 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:09,278 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:09,288 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:09,289 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:13,501 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:13,567 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:13,573 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:13,904 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.20 seconds (attempt 1) after RetryError RetryError[<Future at 0x236844dc2b0 state=finished raised BadRequestError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 241, in generate_response
+    response = client.chat.completions.create(
+        model=resp_gen_model,  # Fixed model for consistent output during testing
+    ...<6 lines>...
+        response_format={"type": "json_object"},  # Groq JSON syntax mode
+        )
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 484, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\groq\_groq_autolog.py", line 50, in patched_call
+    outputs = original(self, *args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 475, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 426, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 472, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x236844dc2b0 state=finished raised BadRequestError>]
+During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0f1e4eb'
+2026-09-09 13:19:14,139 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:14,210 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:14,216 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:14,216 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:15,403 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:15,512 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:15,518 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:15,519 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:17,720 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:17,796 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:17,802 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:17,802 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:21,992 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:22,053 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:22,058 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:22,464 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.40 seconds (attempt 2) after RetryError RetryError[<Future at 0x236844da750 state=finished raised BadRequestError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 241, in generate_response
+    response = client.chat.completions.create(
+        model=resp_gen_model,  # Fixed model for consistent output during testing
+    ...<6 lines>...
+        response_format={"type": "json_object"},  # Groq JSON syntax mode
+        )
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 484, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\groq\_groq_autolog.py", line 50, in patched_call
+    outputs = original(self, *args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 475, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 426, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 472, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x236844da750 state=finished raised BadRequestError>]
+During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0f1e4eb'
+2026-09-09 13:19:22,631 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:22,693 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:22,698 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:22,699 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:23,861 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:23,919 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:23,925 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:23,925 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:26,141 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:26,247 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:26,253 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:19:26,253 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:19:30,510 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:19:30,577 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:19:30,582 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:21,867 - langchain_core.callbacks.manager - WARNING - Error in MlflowLangchainTracer.on_resume callback: AttributeError("'MlflowLangchainTracer' object has no attribute 'on_resume'")
+2026-09-09 13:23:22,057 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:22,134 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:22,140 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:22,140 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:23,325 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:23,385 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:23,389 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:23,389 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:25,556 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:25,626 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:25,631 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:25,631 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:29,805 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:29,886 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:29,892 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:30,100 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.20 seconds (attempt 1) after RetryError RetryError[<Future at 0x236845219d0 state=finished raised BadRequestError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 241, in generate_response
+    response = client.chat.completions.create(
+        model=resp_gen_model,  # Fixed model for consistent output during testing
+    ...<6 lines>...
+        response_format={"type": "json_object"},  # Groq JSON syntax mode
+        )
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 484, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\groq\_groq_autolog.py", line 50, in patched_call
+    outputs = original(self, *args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 475, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 426, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 472, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x236845219d0 state=finished raised BadRequestError>]
+During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0f1e4eb'
+2026-09-09 13:23:30,280 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:30,346 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:30,363 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:30,363 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:31,525 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:31,592 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:31,600 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:31,600 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:33,788 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:33,896 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:33,902 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:33,902 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:38,080 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:38,149 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:38,158 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:38,563 - langgraph.pregel._retry - INFO - Retrying task generate_response after 0.40 seconds (attempt 2) after RetryError RetryError[<Future at 0x2363366ecb0 state=finished raised BadRequestError>]
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\src\agent\nodes.py", line 241, in generate_response
+    response = client.chat.completions.create(
+        model=resp_gen_model,  # Fixed model for consistent output during testing
+    ...<6 lines>...
+        response_format={"type": "json_object"},  # Groq JSON syntax mode
+        )
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 484, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\groq\_groq_autolog.py", line 50, in patched_call
+    outputs = original(self, *args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 475, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 426, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 472, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\cartmind-agentic-ecommerce-support\.venv\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x2363366ecb0 state=finished raised BadRequestError>]
+During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0f1e4eb'
+2026-09-09 13:23:38,732 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:38,785 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:38,791 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:38,791 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:39,983 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:40,126 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:40,131 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:40,131 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:42,313 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:42,418 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:42,421 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:23:42,422 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 4 seconds as it raised BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}.
+2026-09-09 13:23:46,601 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:23:46,668 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-09-09 13:23:46,674 - response_generation - ERROR - RESPONSE API FAILED: Error code: 400 - {'error': {'message': 'This model does not support JSON output', 'type': 'invalid_request_error', 'param': 'response_format'}}
+2026-09-09 13:26:43,738 - rag_generation - INFO - RAG API CALL
+2026-09-09 13:26:44,496 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:26:44,509 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 13:26:44,767 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:26:45,107 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:26:45,109 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 13:27:06,275 - rag_generation - INFO - RAG API CALL
+2026-09-09 13:27:07,839 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:27:07,843 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 13:27:08,036 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:27:08,864 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:27:08,867 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 13:31:15,749 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 13:31:17,088 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 13:31:17,091 - response_generation - INFO - RESPONSE API SUCCESS
