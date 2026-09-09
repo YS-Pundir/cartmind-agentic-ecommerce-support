@@ -25,17 +25,27 @@
 
 ## 📚 Table of Contents
 
-- [1. What This Is](#1-️-what-this-is)
-- [2. What This Is Not](#2--what-this-is-not)
-- [3. Architecture at a Glance](#3--architecture-at-a-glance)
-- [4. Setup](#4-️-setup)
-- [5. Environment](#5--environment)
-- [6. Seed the Data](#6--seed-the-data)
-- [7. Run the Desk](#7--run-the-desk)
-- [8. Run Evals](#8--run-evals)
-- [9. Evidence Map](#9--evidence-map)
-- [10. Known Limits](#10--known-limits)
-- [License](#-license)
+- [🛒 Cartmind](#-cartmind)
+    - [Agentic E-Commerce Support Desk](#agentic-e-commerce-support-desk)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [1. ⚙️ What This Is](#1-️-what-this-is)
+  - [2. 🚫 What This Is Not](#2--what-this-is-not)
+  - [3. 🗺️ Architecture at a Glance](#3-️-architecture-at-a-glance)
+  - [4. 🗂️ Repository Map](#4-️-repository-map)
+  - [5. 🛠️ Setup](#5-️-setup)
+  - [6. 🔐 Environment](#6--environment)
+  - [7. 🌱 Seed the Data](#7--seed-the-data)
+    - [📦 Dataset design (reproduce with `seed=42`)](#-dataset-design-reproduce-with-seed42)
+  - [8. 🏪 Run the Desk](#8--run-the-desk)
+    - [💻 Terminal agent](#-terminal-agent)
+    - [🌐 API + chat frontend](#-api--chat-frontend)
+    - [🔌 MCP server + client](#-mcp-server--client)
+  - [9. 📊 Run Evals](#9--run-evals)
+    - [🏆 Retrieval strategy comparison](#-retrieval-strategy-comparison)
+    - [🎯 RAG triad scores (current run)](#-rag-triad-scores-current-run)
+  - [10. 🔍 Evidence Map](#10--evidence-map)
+  - [11. ⚠️ Known Limits](#11-️-known-limits)
+  - [📄 License](#-license)
 
 ---
 
@@ -72,7 +82,7 @@ It routes a message to a knowledge-base answer or an order-status lookup, escala
 | A payments / NEFT / bank integration | No financial rails are touched anywhere in the system |
 | An OCR pipeline | The 38 knowledge-base files are already machine-readable PDFs, loaded via `PyPDFDirectoryLoader` |
 | A guarantee of "real intelligence" under `MOCK_LLM=true` | Grounded answers are **extractive** (built only from retrieved chunks); the structured ticket is built **deterministically** from intent + tool output. Flip `MOCK_LLM=false` + supply a Groq key for a real model in the loop |
-| A masker for name/address PII | Free text has no reliable pattern to match under a keyless masker — this is an **acknowledged, documented gap** (see [§10](#10--known-limits)). Only fabricated examples are used anywhere in this repo |
+| A masker for name/address PII | Free text has no reliable pattern to match under a keyless masker — this is an **acknowledged, documented gap** (see [§11](#11-️-known-limits)). Only fabricated examples are used anywhere in this repo |
 
 ---
 
@@ -80,38 +90,127 @@ It routes a message to a knowledge-base answer or an order-status lookup, escala
 
 ```mermaid
 flowchart TD
-    U["👤 User message"] --> CI["🧭 classify_intent
-    (PII mask + injection check)"]
+    U(["👤 User message"]) --> CI["🧭 classify_intent<br/><i>PII mask + injection check</i>"]
 
-    CI -- "policy_query" --> RAG["📚 call_rag_tool
-    ChromaDB × 2 collections"]
-    CI -- "order_status" --> SQL["🗃️ call_sql_tool
-    SQLite orders.db + escalation_score"]
-    CI -- "feedback" --> FB["💬 call_feedback_tool"]
-    CI -- "escalate" --> DEFER["🙋 call_defer_human_tool"]
-    CI -.-> INJ{"🛡️ prompt injection?"}
+    CI -->|policy_query| RAG["📚 call_rag_tool<br/><small>ChromaDB × 2 collections</small>"]
+    CI -->|order_status| SQL["🗃️ call_sql_tool<br/><small>SQLite orders.db + escalation_score</small>"]
+    CI -->|feedback| FB["💬 call_feedback_tool"]
+    CI -->|escalate| DEFER["🙋 call_defer_human_tool"]
+    CI -.->|checked inline| INJ{{"🛡️ Prompt injection?"}}
 
-    RAG --> GR["✍️ generate_response
-    (schema-validated)"]
+    RAG --> GR["✍️ generate_response<br/><small>schema-validated</small>"]
     SQL --> GR
     FB --> GR
     DEFER --> GR
     INJ -.-> GR
 
-    style U fill:#f4f4f4,stroke:#999
-    style CI fill:#e8f0fe,stroke:#3b6fd1
-    style RAG fill:#fdf3e7,stroke:#d99a3e
-    style SQL fill:#eaf7ee,stroke:#3ea86b
-    style FB fill:#f5eafc,stroke:#9b5fd1
-    style DEFER fill:#fdeaea,stroke:#d15d5d
-    style GR fill:#e8f0fe,stroke:#3b6fd1
+    classDef entry fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#1a1a1a,font-weight:bold;
+    classDef router fill:#dbe9ff,stroke:#1d4ed8,stroke-width:2px,color:#0b1f4d,font-weight:bold;
+    classDef rag fill:#fff2d9,stroke:#b8720a,stroke-width:2px,color:#4d3200,font-weight:bold;
+    classDef sql fill:#dcf5e3,stroke:#1f8a4c,stroke-width:2px,color:#0c3d20,font-weight:bold;
+    classDef feedback fill:#efe0fc,stroke:#7c2fbf,stroke-width:2px,color:#3a0f5c,font-weight:bold;
+    classDef defer fill:#fde0e0,stroke:#c22a2a,stroke-width:2px,color:#4d0f0f,font-weight:bold;
+    classDef guard fill:#fff,stroke:#c22a2a,stroke-width:2px,stroke-dasharray:4 3,color:#4d0f0f,font-weight:bold;
+    classDef output fill:#dbe9ff,stroke:#1d4ed8,stroke-width:2px,color:#0b1f4d,font-weight:bold;
+
+    class U entry;
+    class CI router;
+    class RAG rag;
+    class SQL sql;
+    class FB feedback;
+    class DEFER defer;
+    class INJ guard;
+    class GR output;
 ```
 
 **6 nodes · 1 real conditional edge** (`classify_intent` fans out on `state["intent"]` to 5 branches) · every node wrapped in a `RetryPolicy` · the whole graph checkpointed to **SQLite** by `thread_id`.
 
 ---
 
-## 4. 🛠️ Setup
+## 4. 🗂️ Repository Map
+
+A guided tour of the codebase — what lives where, and why.
+
+```text
+cartmind/
+├── src/
+│   ├── agent/
+│   │   ├── graph.py                 # LangGraph definition — 6 nodes, RetryPolicy, SqliteSaver checkpointing
+│   │   ├── nodes.py                 # classify_intent + all tool-calling node implementations
+│   │   ├── main.py                  # FastAPI app — /api/chat, /api/threads, /api/documents/upload
+│   │   └── terminal_application.py  # CLI chat loop with persisted JSON memory (history/clear/exit)
+│   ├── tools/
+│   │   └── sql_tool.py              # check_order_status + escalation_score logic
+│   ├── rag/
+│   │   └── retrieval.py             # ChromaDB retrieval — wired to kb_fixed_size by default
+│   ├── guardrails/
+│   │   ├── pii.py                   # Keyless regex masking — phone numbers + card digits only
+│   │   └── injection.py             # Fixed-keyword-list prompt-injection detector
+│   ├── structured_output/
+│   │   └── validate_ticket.py       # Validates every response against schema/agent_response.json
+│   ├── resilience/
+│   │   └── timeouts.py              # Per-node and global timeout enforcement
+│   └── llm_client.py                # MOCK_LLM switch — defaults true even with no .env
+│
+├── mcp_server/
+│   ├── server.py                    # FastMCP server — SSE transport on :8000/sse
+│   └── client.py                    # Reference MCP client pointed at /sse
+│
+├── frontend/
+│   ├── index.html                   # Static chat UI
+│   └── app.js                       # Talks to http://localhost:8000 by default
+│
+├── scripts/
+│   ├── dataset.py                   # generate_order_dataset() — synthetic order generation logic
+│   └── seed.py                      # Seeds orders.db + builds both Chroma collections
+│
+├── eval/
+│   ├── scripts/
+│   │   ├── part1_task45.py                    # Threshold calibration + Precision@3/Recall@3
+│   │   ├── missing_implementations_demo.py    # Memory, PII, injection, retry, timeout demos
+│   │   ├── rag_triad_evaluation_mock.py       # 15-query RAG triad harness
+│   │   └── mcp_client.py                      # MCP round-trip test client
+│   ├── golden/
+│   │   ├── nimbus_rag_golden_test_set_15.json # RAG triad golden queries
+│   │   └── mcp_golden_record_ids.json         # Order IDs used for MCP round-trip tests
+│   ├── results/                     # JSON outputs from every eval script
+│   └── insights/                    # Human-readable .md/.txt writeups of eval results
+│
+├── data/
+│   ├── database/
+│   │   └── orders.db                # 50 synthetic order records (seed=42)
+│   └── policy_docs/
+│       └── nimbus_kb_split_by_topic/  # 38 synthetic policy PDFs (≥12 topics)
+│
+├── storage/
+│   ├── vector_databases/            # kb_fixed_size + kb_sentence_based Chroma collections
+│   ├── conversation/
+│   │   └── conversations.json       # Persisted multi-turn memory, keyed by thread_id
+│   └── checkpoints/
+│       └── checkpoints.sqlite       # LangGraph SqliteSaver checkpoints — enables /resume
+│
+├── logs/
+│   └── agent_run/
+│       └── requests.jsonl           # Masked, trace-ID'd JSON-Lines log of every chat/resume call
+│
+├── schema/
+│   └── agent_response.json          # JSON Schema every generate_response output must satisfy
+│
+├── config/
+│   ├── rag_tool.json                 # Real-model config (openai/gpt-oss-120b) — used only if MOCK_LLM=false
+│   └── response_generator.json       # Real-model config (qwen/qwen3.8-27b) — used only if MOCK_LLM=false
+│
+├── .env.example                      # Safe-to-commit template (MOCK_LLM=true, blank api_key)
+├── requirements.txt                  # Frozen deps (UTF-16 — see Setup note)
+├── pyproject.toml                    # Same dependency list as requirements.txt, UTF-8
+└── LICENSE                           # Apache 2.0
+```
+
+> 💡 **Where to start reading:** `src/agent/graph.py` → `src/agent/nodes.py` gives you the whole control flow in two files. From there, follow whichever branch you care about (`src/rag/`, `src/tools/`, `src/guardrails/`).
+
+---
+
+## 5. 🛠️ Setup
 
 > Requires **Python 3.13**.
 
@@ -139,7 +238,7 @@ iconv -f utf-16 -t utf-8 requirements.txt -o requirements.txt
 
 ---
 
-## 5. 🔐 Environment
+## 6. 🔐 Environment
 
 ```text
 # .env.example — safe to commit
@@ -155,7 +254,7 @@ Only set `MOCK_LLM=false` and fill `api_key` (a **Groq** key) if you want `confi
 
 ---
 
-## 6. 🌱 Seed the Data
+## 7. 🌱 Seed the Data
 
 ```bash
 python scripts/seed.py
@@ -191,7 +290,7 @@ This calls `generate_order_dataset(num_records=50, seed=42)`, writes **50 rows**
 
 ---
 
-## 7. 🏪 Run the Desk
+## 8. 🏪 Run the Desk
 
 ### 💻 Terminal agent
 *Multi-turn, persisted JSON memory, resumable*
@@ -250,7 +349,7 @@ This server binds `fastmcp`'s **SSE** transport at `/sse`, not the newer HTTP-st
 
 ---
 
-## 8. 📊 Run Evals
+## 9. 📊 Run Evals
 
 ```bash
 # Part 1 — threshold calibration + Precision@3/Recall@3 for both chunking strategies
@@ -298,7 +397,7 @@ Given no separation in retrieval quality, **`kb_fixed_size` is the recommended c
 
 ---
 
-## 9. 🔍 Evidence Map
+## 10. 🔍 Evidence Map
 
 *Everything a reviewer needs, cross-referenced to its source of truth.*
 
@@ -322,7 +421,7 @@ Given no separation in retrieval quality, **`kb_fixed_size` is the recommended c
 
 ---
 
-## 10. ⚠️ Known Limits
+## 11. ⚠️ Known Limits
 
 Honest scoping of what this system does **not** yet do:
 
