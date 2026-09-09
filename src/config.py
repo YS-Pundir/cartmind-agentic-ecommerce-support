@@ -61,3 +61,6 @@ checkpoint_conn_loc=project_root/"storage"/"checkpoints"/"checkpoints.sqlite"
 _REQUEST_LOG_FILE=project_root/"logs"/"agent_run"/"requests.jsonl"
 
 
+mlflow_tracking_uri= mlflow_tracking_uri = f"sqlite:///{(project_root/"storage"/ 'mlflow' / 'traces.db').as_posix()}"
+
+print(mlflow_tracking_uri)
