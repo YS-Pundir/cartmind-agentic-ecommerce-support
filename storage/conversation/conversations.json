@@ -507,5 +507,125 @@
         "content": "You’re very welcome! If you have any other questions or need further assistance, just let me know."
       }
     ]
+  },
+  "46757859": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "give me order status for order ORD0033"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0033', 'category': 'Home', 'status': 'Placed', 'order_value_inr': 2704, 'days_since_created': 13, 'delayed_shipment': True, 'escalation_score': 0.6033}"
+      },
+      {
+        "role": "user",
+        "content": "what is delivery process for it ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the knowledge base: 5.2 Delivery Status Definitions\nOrder confirmedmeans payment and order validation have succeeded. 5.2 Delivery Status Definitions\nOrder confirmedmeans payment and order validation have succeeded. Delivery SLAs\nDelivery Service Level Agreements (SLAs) define expected delivery ranges after an order is confirmed and\nreleased for fulfillment."
+      },
+      {
+        "role": "user",
+        "content": "and refund window of that?"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the knowledge base: Delivery SLAs\nDelivery Service Level Agreements (SLAs) define expected delivery ranges after an order is confirmed and\nreleased for fulfillment. Delivery SLAs\nDelivery Service Level Agreements (SLAs) define expected delivery ranges after an order is confirmed and\nreleased for fulfillment. 5.2 Delivery Status Definitions\nOrder confirmedmeans payment and order validation have succeeded."
+      },
+      {
+        "role": "user",
+        "content": "no i am not satisfies , i need human help .."
+      },
+      {
+        "role": "assistant",
+        "content": "Case deferred to human agent and logged successfully!"
+      },
+      {
+        "role": "user",
+        "content": "my feedback was great"
+      },
+      {
+        "role": "assistant",
+        "content": "Feedback registered successfully!"
+      }
+    ]
+  },
+  "46757860": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what are the discount policy of the company?"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the knowledge base: Promotional Discount and Coupon Policy\nPromotional codes are subject to their individual campaign terms. 1\n ###Source: D:\\cartmind-agentic-ecommerce-support\\data\\policy_docs\\nimbus_kb_split_by_topic\\19_promotional_discount_and_coupon_policy.pdf\n\n . Promotional Discount and Coupon Policy\nPromotional codes are subject to their individual campaign terms."
+      },
+      {
+        "role": "user",
+        "content": "please tell me in detail what is that policy"
+      },
+      {
+        "role": "assistant",
+        "content": "**Promotional Discount & Coupon Policy (Nimbus Commerce)**  \n\nBelow is a detailed summary of the policy as it appears in the knowledge base:\n\n| Aspect | Details |\n|--------|---------|\n| **General Rule** | Every promotional code (coupon) is governed by the **specific terms of the campaign** under which it was issued. |\n| **Common Restrictions** (applied unless the campaign states otherwise) | • Minimum basket value<br>• Eligible product categories only<br>• Only **one code per order**<br>• Customer‑account restrictions (e.g., new‑user only)<br>• Campaign expiration date<br>• Geographic restrictions (certain regions may be excluded)<br>• Seller restrictions (may apply only to specific sellers)<br>• Exclusion of items that are already discounted |\n| **Cash Conversion** | A coupon **cannot be converted to cash** under normal circumstances. |\n| **Failed Coupon Application** | 1. Customer should first **verify the campaign requirements** (minimum spend, eligible items, etc.).<br>2. If the coupon still fails, support can **manually investigate** **only** when the customer provides **sufficient information** to reproduce the issue (order number, coupon code, screenshots, etc.). |\n| **Returns After Promotion** | • If a customer returns **one product from a multi‑item order that used a discount**, the refund engine **re‑calculates the discount** based on the remaining items.<br>• The customer **should not expect** to receive the full undiscounted price of the returned product; the refund will reflect the adjusted discount. |\n| **Price Adjustments** | • Nimbus Commerce may issue a **price adjustment** within **7 days** if a qualifying price difference is caused by a **Nimbus‑initiated price change**.<br>• **Promotional coupon differences are excluded** from price adjustments **unless the promotion’s terms explicitly allow it**. |\n\n### How to Use This Information\n- **When applying a coupon:** Check the campaign’s specific terms (minimum spend, eligible SKUs, expiry, etc.) before checkout.  \n- **If a coupon doesn’t work:** Verify the above restrictions first; then contact support with full details for a manual check.  \n- **If you return an item from a discounted order:** Expect the refund to be based on the revised discount, not the original full price.  \n- **If you notice a price drop after purchase:** You may request a price adjustment within 7 days, but only for regular price changes—not for coupon‑related differences unless stated.\n\nThese points capture the entire **Promotional Discount and Coupon Policy** as documented in the knowledge base. If you need clarification on a specific campaign’s terms, please provide the coupon code or campaign name so we can look up the exact conditions."
+      },
+      {
+        "role": "user",
+        "content": "thanks , that was really helpfull ."
+      },
+      {
+        "role": "assistant",
+        "content": "**Promotional Discount and Coupon Policy (Nimbus Commerce)**  \n\nBelow is the complete policy as it appears in the Nimbus Commerce knowledge base.\n\n---\n\n### 1. General Rule\n- Every promotional code (coupon) is governed **solely by the specific terms of the campaign** under which it was issued.  \n- The campaign’s own rules take precedence over any generic statement.\n\n### 2. Common Restrictions (apply unless the campaign states otherwise)\n| Restriction | What it means |\n|-------------|----------------|\n| **Minimum basket value** | The order must reach a set total amount before the coupon can be applied. |\n| **Eligible product categories** | Only products in the listed categories can benefit from the coupon. |\n| **One code per order** | Only a single promotional code may be used in a single checkout. |\n| **Customer‑account restrictions** | Some coupons may be limited to certain customers (e.g., new‑user only, first‑time buyer). |\n| **Campaign expiration** | The coupon must be used before the stated expiry date. |\n| **Geographic restrictions** | Certain regions or countries may be excluded from the promotion. |\n| **Seller restrictions** | The coupon may apply only to specific sellers or brands. |\n| **Exclusion of already‑discounted items** | Items that already have a discount cannot receive an additional coupon discount. |\n\n### 3. Cash Conversion\n- **A coupon cannot be converted to cash** under normal circumstances.\n\n### 4. Failed Coupon Application\n1. **Customer first step:** Verify that the order meets all campaign requirements (minimum spend, eligible SKUs, expiry, etc.).  \n2. **Support investigation:** If the coupon still fails, support may **manually investigate** **only** when the customer provides **sufficient information** to reproduce the issue, such as:  \n   - Order number  \n   - Coupon code  \n   - Screenshots or error messages  \n\n### 5. Returns After Promotion\n- When a **single product is returned from a multi‑item order that used a discount**, the refund engine **re‑calculates the discount** based on the remaining items.  \n- The customer **should not expect** to receive the full undiscounted price of the returned product; the refund will reflect the adjusted discount amount.\n\n### 6. Price Adjustments\n- Nimbus Commerce may issue a **price adjustment within 7 days** if a qualifying price difference is caused by a **Nimbus‑initiated price change** (e.g., the product’s listed price drops after purchase).  \n- **Promotional coupon differences are excluded** from price adjustments **unless the promotion’s terms explicitly allow** such adjustments.\n\n---\n\n### How to Apply This Information\n\n| Situation | Action |\n|-----------|--------|\n| **Applying a coupon** | Review the specific campaign’s terms (minimum spend, eligible SKUs, expiry, etc.) before checkout. |\n| **Coupon doesn’t work** | Check the common restrictions first. If still unresolved, contact support with order number, coupon code, and any screenshots so a manual check can be performed. |\n| **Returning an item from a discounted order** | Expect the refund to be based on the revised discount after the return, not the original full price. |\n| **Noticing a price drop after purchase** | Request a price adjustment within 7 days for regular price changes. Coupon‑related price differences are only adjusted if the promotion explicitly permits it. |\n\n---\n\nIf you need clarification on a particular campaign (e.g., the exact minimum basket value or eligible categories), please provide the coupon code or campaign name so we can look up the precise conditions."
+      },
+      {
+        "role": "user",
+        "content": "okay , thank you"
+      },
+      {
+        "role": "assistant",
+        "content": "You’re welcome! If you have any other questions or need further assistance, feel free to let me know. Have a great day!"
+      }
+    ]
+  },
+  "46757861": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need information of the coupons of the company"
+      },
+      {
+        "role": "assistant",
+        "content": "**Coupon (Promotional Code) Information**\n\n- **General Rules**\n  - Coupons are governed by the specific terms of each campaign.\n  - Common restrictions include:\n    - Minimum basket value  \n    - Eligible product categories  \n    - Only **one** coupon per order  \n    - Customer‑account restrictions (e.g., new vs. existing customers)  \n    - Campaign expiration date  \n    - Geographic restrictions (certain regions may be excluded)  \n    - Seller restrictions (some sellers may not honor the coupon)  \n    - Exclusion of items that are already discounted  \n\n- **Cash Conversion**\n  - Coupons **cannot** normally be converted to cash.\n\n- **If a Coupon Fails at Checkout**\n  1. Verify that the order meets all campaign requirements (minimum spend, eligible items, etc.).  \n  2. If everything appears correct, support can investigate **only** when the customer provides enough details to reproduce the issue (order number, coupon code, screenshots, etc.).\n\n- **Returns Involving a Coupon**\n  - When a product from a multi‑item order that used a coupon is returned, the refund engine **recalculates** the discount.  \n  - The customer should **not** expect to receive the full undiscounted price of the returned item; the discount is adjusted proportionally.\n\n- **Price Adjustments**\n  - Nimbus Commerce may issue a price‑adjustment refund within **7 days** if a price change (not a coupon change) occurs after purchase.  \n  - Differences caused by promotional coupons are **excluded** from price‑adjustment refunds unless the specific promotion states otherwise.\n\nIf you have a particular coupon code or campaign you’re unsure about, please share the code and order details so we can verify the applicable terms for you."
+      }
+    ]
+  },
+  "46757862": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "okay , so now get me that policy"
+      },
+      {
+        "role": "assistant",
+        "content": "Sure! Could you let me know which specific policy you’d like to see?  \nFor example, are you looking for the **Customer Support Policy Overview**, the **Return Window by Product Category**, the **COD Refund Timelines**, the **Policy Change and Version‑Control Rules**, or another section from the Nimbus Commerce knowledge base? Just let me know, and I’ll provide the exact policy details you need."
+      },
+      {
+        "role": "user",
+        "content": "payment failure"
+      },
+      {
+        "role": "assistant",
+        "content": "**Payment‑failure overview (per Nimbus Commerce policy)**  \n\n1. **Common reasons for a payment failure**  \n   - Insufficient funds or bank restrictions  \n   - Expired card or incorrect billing details  \n   - Authentication failures (e.g., 3‑D Secure)  \n   - Provider outages or technical issues  \n   - Risk‑control blocks  \n\n2. **Retry sequence for eligible online card payments**  \n   1. **Original authorization attempt** (the first try)  \n   2. **Customer‑initiated retry** – you may ask the shopper to try again manually  \n   3. **Automated second retry** (if the payment provider supports it)  \n   4. **Payment‑method change** – suggest using a different card or payment option  \n   5. **Order cancellation** – if the payment still cannot be completed  \n\n   *Note:* A failed payment does **not** automatically mean an order was created successfully.\n\n3. **Temporary authorizations**  \n   - Even when an order fails, the bank may place a temporary hold (often shown as a “pending” amount).  \n   - This hold is released by the bank on its own schedule; we cannot promise an exact release time unless the payment provider confirms it.\n\n4. **Duplicate‑charge concerns**  \n   - Two entries on a bank statement are not necessarily two completed charges; one may be the temporary authorization described above.  \n   - If you see two **successful captures** for the same order without a second order, the case must be escalated to the Payments team.\n\n5. **Payment‑retry limits**  \n   - Repeated failures can trigger a security review.  \n   - Advise customers not to keep retrying indefinitely.  \n   - If multiple payment methods fail, recommend they verify all billing details and try a different supported method.\n\n6. **Typical scenario**  \n   - *Scenario J (Payment failed but bank shows a charge)*: Check whether the amount is an authorization hold or a captured payment. Do **not** automatically label it a duplicate charge.\n\nIf you need help with a specific transaction (e.g., checking the status of an authorization, confirming whether a capture occurred, or escalating a duplicate‑capture case), please provide the order ID or relevant details so we can look it up."
+      },
+      {
+        "role": "user",
+        "content": "what is order status of ORD0009"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0009', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 2063, 'days_since_created': 30, 'delayed_shipment': False, 'escalation_score': 0.7}"
+      }
+    ]
   }
 }
