@@ -10,11 +10,8 @@
 ![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-1C3C3C)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/Vector%20Store-ChromaDB-6E56CF)
-![Offline](https://img.shields.io/badge/Runs-100%25%20Offline%20(MOCK__LLM%3Dtrue)-success)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
 
-
-*Built as a capstone project for the Nykaa (E-commerce & Retail) track.*
 
 
 </div>
