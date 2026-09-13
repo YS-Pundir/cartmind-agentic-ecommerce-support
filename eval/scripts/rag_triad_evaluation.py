@@ -1,24 +1,4 @@
-"""
-RAG Triad Evaluation Script — Nimbus Commerce RAG system.
 
-Runs the existing retrieval + generation pipeline (src.rag.retrieval /
-src.rag.generation) for every query in the golden test set, then scores each
-(query, context, answer) triple with THREE independent LLM-as-judge calls —
-context_relevance, groundedness, answer_relevance — using the exact judge
-prompts/rubrics embedded in the golden test-set JSON.
-
-Assumptions (adjust the CONFIG block below if these don't match your setup):
-  - This script is run from the project root, so `src.rag.*` and `src.config`
-    are importable (same layout your existing modules already assume).
-  - `src.config` exposes `api_key` and `rag_model` (same Groq creds used by
-    generation.py).
-  - The golden test-set JSON lives at ./nimbus_rag_golden_test_set_15.json
-    (change GOLDEN_SET_PATH if it's elsewhere).
-
-Output:
-  - rag_triad_evaluation_results.json  -> full structured results + averages
-  - rag_triad_evaluation_results.csv   -> flat per-query score table
-"""
 
 import csv
 import json

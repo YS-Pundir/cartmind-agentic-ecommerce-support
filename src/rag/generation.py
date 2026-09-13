@@ -12,6 +12,8 @@ from src.llm_client import get_llm_client
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain_classic.vectorstores import Chroma
 
+SIMILARITY_THRESHOLD=0.3282
+
 from groq import Groq
 client=get_llm_client()
 

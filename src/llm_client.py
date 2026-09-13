@@ -1,23 +1,5 @@
 """
-src/llm_client.py — single switch point between the real Groq client and the
-deterministic MockGroqClient (src/rag/mock_llm.py).
-
-This is the piece your current codebase is missing: generation.py and
-nodes.py both do `from groq import Groq; client = Groq(api_key=api_key)`
-directly, with no MOCK_LLM branch, so every run — including your graded
-transcripts — hits the real network and needs a real api_key. That directly
-contradicts the brief's "graded transcripts must use MOCK_LLM alone, zero
-API keys, zero network access" requirement.
-
-Usage — everywhere you currently do this:
-
-    from groq import Groq
-    client = Groq(api_key=api_key)
-
-...do this instead:
-
-    from src.llm_client import get_llm_client
-    client = get_llm_client()
+Instruction for viewers :
 
 Nothing else about the call site changes: `client.chat.completions.create(...)`
 and `response.choices[0].message.content` work identically either way.

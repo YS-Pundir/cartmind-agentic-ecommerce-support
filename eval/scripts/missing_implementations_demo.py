@@ -1,24 +1,3 @@
-"""
-Run the remaining implementation demonstrations for the Cartmind project.
-
-Demonstrations covered:
-1. Multi-turn persisted memory
-2. PII masking
-3. Prompt-injection guardrail
-4. Retry behaviour
-5. Timeout behaviour
-
-Run from the project root:
-
-    $env:MOCK_LLM="true"
-    python eval/scripts/missing_implementations_demo.py
-
-The script writes:
-    eval/results/demonstrations/missing_implementations_results.json
-
-It deliberately uses deterministic test doubles for retry/timeout so the
-demonstration does not depend on an unreliable external service.
-"""
 
 from __future__ import annotations
 

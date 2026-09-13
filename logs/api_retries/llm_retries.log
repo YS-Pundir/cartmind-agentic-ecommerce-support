@@ -1689,3 +1689,112 @@ During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0
 2026-09-09 13:31:15,749 - response_generation - INFO - RESPONSE API CALL
 2026-09-09 13:31:17,088 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-09-09 13:31:17,091 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:04,846 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:04,847 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:04,849 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:04,849 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:04,963 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:04,964 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:04,966 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:04,966 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,041 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:05,042 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:05,044 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,044 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,111 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:05,113 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:05,114 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,115 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,155 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,156 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,195 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,195 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,426 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:05,427 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:05,429 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,429 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,633 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:23:05,634 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:23:05,636 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:23:05,637 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:23:05,646 - demo_retry_test - WARNING - Retrying __main__.run_S6a.<locals>.flaky_call in 0.1 seconds as it raised ConnectionError: simulated transient failure #1.
+2026-09-09 14:23:05,746 - demo_retry_test - WARNING - Retrying __main__.run_S6a.<locals>.flaky_call in 0.2 seconds as it raised ConnectionError: simulated transient failure #2.
+2026-09-09 14:42:25,148 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:25,151 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:42:25,202 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:25,202 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:42:25,534 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:42:25,535 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:42:25,537 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:25,538 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:42:25,580 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:25,580 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #1
+2026-09-09 14:42:25,580 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised RuntimeError: simulated transient failure #1.
+2026-09-09 14:42:26,581 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:26,581 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #2
+2026-09-09 14:42:26,582 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised RuntimeError: simulated transient failure #2.
+2026-09-09 14:42:28,583 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:42:28,583 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:45:41,546 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:41,546 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:45:41,594 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:41,594 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:45:41,717 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:45:41,719 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:45:41,720 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:41,720 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:45:41,750 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:41,751 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #1
+2026-09-09 14:45:41,751 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised RuntimeError: simulated transient failure #1.
+2026-09-09 14:45:42,752 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:42,752 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #2
+2026-09-09 14:45:42,752 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised RuntimeError: simulated transient failure #2.
+2026-09-09 14:45:44,753 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:45:44,753 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:48:26,223 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:26,224 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:48:26,267 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:26,267 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:48:26,360 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:48:26,362 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:48:26,363 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:26,364 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:48:26,391 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:26,391 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #1
+2026-09-09 14:48:26,392 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised RuntimeError: simulated transient failure #1.
+2026-09-09 14:48:27,392 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:27,393 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #2
+2026-09-09 14:48:27,393 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised RuntimeError: simulated transient failure #2.
+2026-09-09 14:48:29,394 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:48:29,394 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:51:31,398 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:31,399 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:51:31,437 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:31,438 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:51:31,534 - rag_generation - INFO - RAG API CALL
+2026-09-09 14:51:31,536 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 14:51:31,537 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:31,537 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 14:51:31,566 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:31,566 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #1
+2026-09-09 14:51:31,566 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 1 seconds as it raised RuntimeError: simulated transient failure #1.
+2026-09-09 14:51:32,567 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:32,567 - response_generation - ERROR - RESPONSE API FAILED: simulated transient failure #2
+2026-09-09 14:51:32,567 - response_generation - WARNING - Retrying src.agent.nodes.generate_response in 2 seconds as it raised RuntimeError: simulated transient failure #2.
+2026-09-09 14:51:34,568 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 14:51:34,568 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 15:08:34,855 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 15:08:35,613 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 15:08:35,633 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 15:08:53,144 - rag_generation - INFO - RAG API CALL
+2026-09-09 15:08:54,457 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 15:08:54,459 - rag_generation - INFO - RAG API SUCCESS
+2026-09-09 15:08:54,642 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 15:08:56,017 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 15:08:56,021 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 15:09:12,888 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 15:09:13,279 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 15:09:13,281 - response_generation - INFO - RESPONSE API SUCCESS
+2026-09-09 15:09:22,700 - response_generation - INFO - RESPONSE API CALL
+2026-09-09 15:09:23,519 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 15:09:23,521 - response_generation - INFO - RESPONSE API SUCCESS

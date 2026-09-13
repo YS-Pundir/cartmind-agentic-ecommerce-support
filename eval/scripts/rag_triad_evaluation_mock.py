@@ -1,25 +1,3 @@
-"""
-eval/scripts/rag_triad_evaluation_mock.py
-
-RAG Triad Evaluation Script — Nimbus Commerce RAG system — MOCK_LLM mode.
-
-Uses your EXISTING retrieval pipeline (src.rag.retrieval: retreiver /
-retrieve_chunks) exactly as-is — no new retriever, no TF-IDF, nothing
-swapped out on the retrieval side.
-
-The only thing swapped is the LLM: generation goes through
-src.llm_client.get_llm_client() (-> src.rag.mock_llm.MockGroqClient when
-MOCK_LLM=true, per your llm_client.py / mock_llm.py), and judging goes
-through src.rag.mock_llm.judge_rag_triad(), both zero-network,
-zero-API-key, fully deterministic.
-
-Run with:
-    MOCK_LLM=true python -m eval.scripts.rag_triad_evaluation_mock
-
-Output:
-  - eval/results/rag_triad_evaluation_results_mock.json
-  - eval/results/rag_triad_evaluation_results_mock.csv
-"""
 
 import csv
 import json

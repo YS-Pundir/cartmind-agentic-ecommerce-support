@@ -1,25 +1,4 @@
-"""
-src/rag/mock_llm.py — the ONE deterministic, offline LLM used everywhere MOCK_LLM=true.
 
-Replaces your current mock_llm.py, which defines a MockLLM class that is never
-imported by generation.py or nodes.py (both of those call the real Groq API
-directly). This file is a genuine drop-in for `groq.Groq`: it exposes the same
-`client.chat.completions.create(...)` -> `response.choices[0].message.content`
-shape, so swapping it in needs a one-line change at each call site (see bottom
-of this file for the exact patch).
-
-It handles all three places your capstone needs an LLM under MOCK_LLM:
-  1. Grounded RAG generation   (src/rag/generation.py)          -> extractive
-     answer built ONLY from the retrieved context, never invented text.
-  2. Structured ticket output  (src/agent/nodes.py generate_response) -> a
-     JSON object built deterministically from intent + tool_output.
-  3. RAG-triad judge           (Part 3 Task 13, new code you write) -> call
-     judge_rag_triad(query, context, answer) directly, no prompt needed.
-
-Everything here is pure string/set logic — zero network, zero API key,
-zero randomness. Same input always gives the same output, which is what lets
-your graded transcripts be reproducible.
-"""
 
 from __future__ import annotations
 

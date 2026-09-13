@@ -1,33 +1,4 @@
-"""
-Structured request logging.
 
-This is intentionally a separate module from src/logging_config.py (which
-sets up your general application logging - e.g. the tenacity
-`before_sleep_log(logger, ...)` retry warnings emitted in
-src/agent/nodes.py). This file has one job: write exactly one JSON-Lines
-entry per inbound API request, with a trace id and timing, to its own
-log file/logger so it never mixes with retry/app logs and vice versa.
-
-PII handling
-------------
-Whatever text is logged (request_text / response_text) is passed through
-the *same* `mask_pii()` guardrail that src/agent/nodes.py already applies
-to user input before it reaches the model (see classify_intent()). That
-means any fixed-format PII field mask_pii knows how to mask never reaches
-disk in the clear here - masking happens once, log and model see the same
-masked value. If masking itself fails, we redact the whole field rather
-than fall back to logging the raw text.
-
-Usage
------
-    from src.observability.request_logging import log_request
-
-    with log_request("/api/chat", thread_id=thread_id, request_text=req.message) as ctx:
-        answer = run_agent(...)
-        ctx["response_text"] = answer
-
-One line is written when the `with` block exits, whether it raised or not.
-"""
 
 from __future__ import annotations
 
