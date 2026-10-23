@@ -1,5 +1,5 @@
 // Point this at wherever `uvicorn main:app` is running.
-const API_BASE = "http://localhost:8000";
+const API_BASE = "";   // same-origin: nginx proxies /api/* to the backend
 
 const els = {
   drawerToggle: document.getElementById("drawerToggle"),

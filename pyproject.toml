@@ -2,7 +2,7 @@
 name = "cartmind-agentic-ecommerce-support"
 version = "0.1.0"
 description = "Production-minded agentic e-commerce support system with LangGraph, RAG, tool calling, memory, guardrails, MCP, resilience, evaluation, and FastAPI."
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.12,<3.14"
 readme = "README.md"
 
 dependencies = [
