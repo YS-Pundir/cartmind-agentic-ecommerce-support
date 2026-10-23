@@ -180,15 +180,26 @@ def _read_conversations_store() -> dict:
         return {}
 
 
+def _content_to_text(content) -> Optional[str]:
+    """Stored messages can be plain strings or structured dicts from the agent."""
+    if content is None or isinstance(content, str):
+        return content
+    if isinstance(content, dict):
+        for key in ("reply", "answer", "response", "message", "text", "content"):
+            if isinstance(content.get(key), str):
+                return content[key]
+    return json.dumps(content, ensure_ascii=False)
+
+
 def _thread_sort_key(summary: ThreadSummary):
     # Default ids from ConversationMemory.get_next_conversation_id() are
     # numeric strings ("1001", "1002", ...); sort those numerically so the
     # sidebar orders newest-first, and fall back to plain string sort for
     # any custom thread_id a client might pass in.
     try:
-        return (0, int(summary.thread_id))
+        return (1, int(summary.thread_id))
     except ValueError:
-        return (1, summary.thread_id)
+        return (0, summary.thread_id)
 
 
 # ---------------------------------------------------------------------------
@@ -288,7 +299,7 @@ def list_threads() -> list[ThreadSummary]:
         ThreadSummary(
             thread_id=tid,
             message_count=len(data.get("messages", [])),
-            last_message=(data.get("messages") or [{}])[-1].get("content")
+            last_message=_content_to_text(data["messages"][-1].get("content"))
             if data.get("messages")
             else None,
         )
@@ -308,7 +319,10 @@ def get_thread_messages(thread_id: str) -> ThreadMessagesResponse:
     history = con_memory.get_history(thread_id)
     return ThreadMessagesResponse(
         thread_id=thread_id,
-        messages=[Message(**m) for m in history],
+        messages=[
+            Message(role=m["role"], content=_content_to_text(m.get("content")) or "")
+            for m in history
+        ],
     )
 
 

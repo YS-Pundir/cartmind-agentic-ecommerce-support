@@ -1961,3 +1961,15 @@ During task with name 'generate_response' and id 'dd0350ed-8fbf-cfb5-f9f5-c962a0
 2026-10-23 16:21:00,435 - response_generation - INFO - RESPONSE API CALL
 2026-10-23 16:21:00,932 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-10-23 16:21:00,937 - response_generation - INFO - RESPONSE API SUCCESS
+2026-10-23 17:43:31,930 - rag_generation - INFO - RAG API CALL
+2026-10-23 17:43:33,235 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-23 17:43:33,274 - rag_generation - INFO - RAG API SUCCESS
+2026-10-23 17:43:33,301 - response_generation - INFO - RESPONSE API CALL
+2026-10-23 17:43:33,844 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-23 17:43:33,846 - response_generation - INFO - RESPONSE API SUCCESS
+2026-10-23 18:00:16,925 - response_generation - INFO - RESPONSE API CALL
+2026-10-23 18:00:17,480 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-23 18:00:17,508 - response_generation - INFO - RESPONSE API SUCCESS
+2026-10-23 18:02:40,818 - response_generation - INFO - RESPONSE API CALL
+2026-10-23 18:02:41,248 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-23 18:02:41,258 - response_generation - INFO - RESPONSE API SUCCESS

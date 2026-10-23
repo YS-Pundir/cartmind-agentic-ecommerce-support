@@ -1203,5 +1203,41 @@
         "content": "{'record_id': 'ORD0009', 'category': 'Home', 'status': 'Shipped', 'order_value_inr': 2063, 'days_since_created': 30, 'delayed_shipment': False, 'escalation_score': 0.7}"
       }
     ]
+  },
+  "46757872": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "hey tell me company policy on late delivery"
+      },
+      {
+        "role": "assistant",
+        "content": "**Company policy on late delivery (per the Delivery SLA document):**\n\n1. **When a delivery is considered “late”**  \n   - A delivery is treated as late when the current date is **past the promised delivery window** for that service (e.g., Standard 2‑5 business days, Express 1‑2 business days, etc.) **and no approved exception (weather, carrier disruption, customs, etc.) has been granted**.\n\n2. **Initial steps for support agents**  \n   - **Check the tracking data** first.  \n   - If the parcel is still **“in transit” and there has been no carrier scan for 48 hours**, the agent may **open a carrier investigation** to determine the cause of the delay.\n\n3. **What a delayed parcel is *not* automatically**  \n   - A delayed parcel **should not be declared lost** right away.  \n   - The **lost‑package workflow** only begins after the specific **investigation threshold** is met (e.g., 48 hours of inactivity for domestic shipments, or earlier for high‑value items).\n\n4. **Additional notes**  \n   - The SLA ranges are **operational targets**, not absolute guarantees.  \n   - Exceptions such as weather events, carrier disruptions, customs processing, remote‑area restrictions, or customer‑requested delivery changes can legitimately extend the timeline.\n\n**In short:** If a parcel is past its promised delivery window without an approved exception, support should verify tracking, and if there’s been no carrier activity for 48 hours while the item is in transit, open a carrier investigation. Only after the investigation threshold is reached should the lost‑package process be considered."
+      }
+    ]
+  },
+  "46757873": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "hey , give me the order info of ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      }
+    ]
+  },
+  "46757874": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is order details of ORD0007"
+      },
+      {
+        "role": "assistant",
+        "content": "{'record_id': 'ORD0007', 'category': 'Home', 'status': 'Delivered', 'order_value_inr': 6930, 'days_since_created': 27, 'delayed_shipment': True, 'escalation_score': 0.93}"
+      }
+    ]
   }
 }
